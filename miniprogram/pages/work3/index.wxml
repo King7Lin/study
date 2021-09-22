@@ -1,2 +1,9 @@
 <!--miniprogram/pages/work3/index.wxml-->
-<text>work3 比大小</text>
+<form bindsubmit="submit">
+  <text>第一个数字</text>
+  <input type="number" name="num1" class="num1"></input>
+  <text>第二个数字</text>
+  <input type="number" name="num2" class="num2"></input>
+  <button form-type="submit" type="primary">比较</button>
+</form>
+<view>结果:{{result}}</view>
