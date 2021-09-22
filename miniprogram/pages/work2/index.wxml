@@ -1,0 +1,2 @@
+<!--miniprogram/pages/work2/index.wxml-->
+<text bindtap='kkk'>{{msg}}</text>

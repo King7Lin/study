@@ -1,0 +1,16 @@
+Page({
+  data:{
+    msg:'hello'
+  },
+  kkk(){
+    if(this.data.msg=='hello'){
+      this.setData({
+        msg:'world'
+      })
+    }else{
+      this.setData({
+        msg:'hello'
+      })
+    }
+  }
+})
