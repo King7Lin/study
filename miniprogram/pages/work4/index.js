@@ -1,3 +1,23 @@
 Page({
-
+  data:{
+    btnc:false,
+    btnd:false,
+    btne:false,
+    btnf:false,
+    btng:false,
+    btna:false,
+    btnb:false,
+    src:'images/c.png'
+  },
+  c(){
+    this.setData({
+      btnc:true,
+      btnd:false,
+      btne:false,
+      btnf:false,
+      btng:false,
+      btna:false,
+      btnb:false,
+    })
+  }
 })
