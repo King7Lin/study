@@ -1,12 +1,19 @@
 <!--miniprogram/pages/work4/index.wxml-->
 <view class="body">
     <view class="tab">
-    
+      <view bindtap='c' class='sheet {{btnc?"active":""}}'>C</view>
+      <view bindtap='d' class='sheet {{btnd?"active":""}}'>D</view>
+      <view bindtap='e' class='sheet {{btne?"active":""}}'>E</view>
+      <view bindtap='f' class='sheet {{btnf?"active":""}}'>F</view>
+      <view bindtap='g' class='sheet {{btng?"active":""}}'>G</view>
+      <view bindtap='a' class='sheet {{btna?"active":""}}'>A</view>
+      <view bindtap='b' class='sheet {{btnb?"active":""}}'>B</view>
     </view>
     <view>
-      <image/>
+      <image src='{{src}}'/>
     </view>
+</view>
     <view>
       <text>尤克里里 yeah! </text>
     </view>
-</view>
+
