@@ -18,6 +18,7 @@ Page({
       btng:false,
       btna:false,
       btnb:false,
+      src:'images/c.png'
     })
   },
   d(){
@@ -29,6 +30,7 @@ Page({
       btng:false,
       btna:false,
       btnb:false,
+      src:'images/d.png'
     })
   },
   e(){
@@ -40,6 +42,7 @@ Page({
       btng:false,
       btna:false,
       btnb:false,
+      src:'images/e.png'
     })
   },
   f(){
@@ -51,6 +54,7 @@ Page({
       btng:false,
       btna:false,
       btnb:false,
+      src:'images/f.png'
     })
   },
   g(){
@@ -62,6 +66,7 @@ Page({
       btng:true,
       btna:false,
       btnb:false,
+      src:'images/g.png'
     })
   },
   a(){
@@ -73,6 +78,7 @@ Page({
       btng:false,
       btna:true,
       btnb:false,
+      src:'images/a.png'
     })
   },
   b(){
@@ -84,6 +90,7 @@ Page({
       btng:false,
       btna:false,
       btnb:true,
+      src:'images/b.png'
     })
   },
 })
