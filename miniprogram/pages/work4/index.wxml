@@ -1,0 +1,12 @@
+<!--miniprogram/pages/work4/index.wxml-->
+<view class="body">
+    <view class="tab">
+    
+    </view>
+    <view>
+      <image/>
+    </view>
+    <view>
+      <text>尤克里里 yeah! </text>
+    </view>
+</view>
