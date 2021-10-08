@@ -1,3 +1,3 @@
 <!--miniprogram/pages/test/test.wxml-->
 <view>{{msg}}</view>
-<view wx:for='{{list}}'>{{item}}</view>
+<view wx:for='{{list}}' wx:key='this'>{{index}}-{{item.name}}</view>
