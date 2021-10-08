@@ -13,7 +13,7 @@
       <image src='{{src}}'/>
     </view>
 </view>
-    <view>
+    <view> 
       <text>尤克里里 yeah! </text>
     </view>
 
