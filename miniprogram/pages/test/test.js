@@ -8,9 +8,15 @@ Page({
       {name:'stu4',score:{miniapp:83,linux:75,php:85}},
       {name:'stu5',score:{miniapp:84,linux:75,php:85}},
     ]
-   
       
-
-  
+  },
+  click(e){
+    console;e.log(e)
+    const id =e.currentTarget.dataset.id
+    const str=this.data.list[id].name+"linux成绩"
+    +this.data.list[id].score.linux
+    wx.showToast({
+      title: 'str',
+    })
   }
 })
