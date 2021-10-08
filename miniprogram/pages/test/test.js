@@ -11,12 +11,12 @@ Page({
       
   },
   click(e){
-    console;e.log(e)
+    console.log(e)
     const id =e.currentTarget.dataset.id
     const str=this.data.list[id].name+"linux成绩"
     +this.data.list[id].score.linux
     wx.showToast({
-      title: 'str',
+      title: str,
     })
   }
 })
