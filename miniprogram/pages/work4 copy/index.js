@@ -10,7 +10,7 @@ Page({
       {name:'B',active:false},
     ],
     src:'images/c.png'
-  },
+  },  
   click(e){
     console.log(e)
     let num=e.currentTarget.dataset.id
