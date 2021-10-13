@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -34,6 +35,12 @@
         {
           "name": "pages/work4 copy/index",
           "pathName": "pages/work4 copy/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/work5/index",
+          "pathName": "pages/work5/index",
           "query": "",
           "scene": null
         }

@@ -1,0 +1,39 @@
+<view class="content">
+  <!-- 屏幕 -->
+  <view class="screen">
+    <view>{{num}}</view>
+    <view> {{op}}</view>
+  </view>
+  <!-- 键盘 -->
+  <view>
+    <view class="btnrow">
+      <view class="btn orange" bindtap='clear'>C</view>
+      <view class="btn orange" bindtap='delete'>del</view>
+      <view class="btn orange" bindtap='opbtn' data-val='%'>%</view>
+      <view class="btn orange" bindtap='opbtn' data-val='+'>+</view>
+    </view>
+    <view class="btnrow">
+      <view class="btn blue" bindtap='numbtn' data-val="7">7</view>
+      <view class="btn blue" bindtap='numbtn' data-val="8">8</view>
+      <view class="btn blue" bindtap='numbtn' data-val="9">9</view>
+      <view class="btn orange" bindtap="opbtn" data-val="-">-</view>
+    </view>
+    <view class="btnrow">
+      <view class="btn blue" bindtap="numbtn" data-val="4">4</view>
+      <view class="btn blue" bindtap="numbtn" data-val="5">5</view>
+      <view class="btn blue" bindtap="numbtn" data-val="6">6</view>
+      <view class="btn orange" bindtap="opbtn" data-val="*">*</view>
+    </view>
+    <view class="btnrow">
+      <view class="btn blue" bindtap="numbtn" data-val="1">1</view>
+      <view class="btn blue" bindtap="numbtn" data-val="2">2</view>
+      <view class="btn blue" bindtap="numbtn" data-val="3">3</view>
+      <view class="btn orange" bindtap="opbtn" data-val="/">/</view>
+    </view>
+    <view  class='btnrow'>
+      <view class="btn blue zero" bindtap="numbtn" data-val="0">0</view>
+      <view class="btn blue" bindtap="dotbtn">.</view>
+      <view class="btn orange" bindtap="opbtn" data-val="=">=</view>
+    </view>
+  </view>
+</view>
