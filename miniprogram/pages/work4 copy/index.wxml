@@ -1,0 +1,14 @@
+<!--miniprogram/pages/work4/index.wxml-->
+<view class="body">
+    <view class="tab">
+      <view wx:for="{{list}}" wx:key="this"  bindtap='click' data-id="{{index}}" class='sheet {{item.active?"active":""}}'>{{item.name}}</view>
+      
+    </view>
+    <view>
+      <image src='{{src}}'/>
+    </view>
+</view>
+    <view> 
+      <text>尤克里里 yeah! </text> 
+    </view>
+
