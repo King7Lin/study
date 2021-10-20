@@ -3,6 +3,8 @@
   <view class="screen">
     <view>{{num}}</view>
     <view> {{op}}</view>
+
+    
   </view>
   <!-- 键盘 -->
   <view>
