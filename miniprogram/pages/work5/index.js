@@ -75,14 +75,14 @@ Page({
       this.lastNum%=curNum
     }else if(op=='='){
       this.lastNum=curNum
-    }else if(op=='平方'){
-
-    }else if(op=='开方'){
-
+    }else if(op=='square'){
+      this.lastNum =calc.square(curNum)
+    }else if(op=='root'){
+      this.lastNum =calc.root(curNum)
     }else if(op=='sin'){
-
+      this.lastNum =calc.sin(curNum)
     }else if(op=='cos'){
-      
+      this.lastNum =calc.cos(curNum)
     }
     this.setData({
       num:this.lastNum

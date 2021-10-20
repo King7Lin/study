@@ -55,16 +55,19 @@ function div(arg1,arg2){
     let r2 =Number(a2.replace('.',''))
     return mul(r1/r2,Math.pow(10,t2-t1))
 }
-function square(arg1,arg2){
-    let t1=0;
-    let t2=0;
-    if(arg1.toString().indexOf('.')>-1){
-        t1 = arg1.toString().split('.')[1].length
-    }
-    if(arg2.toString().indexOf('.')>-1){
-        t2=arg2.toString().split('.')[1].length
-    }
+
+function square(arg1){
+    return Math.pow(arg1,2)
+}
+function root(arg){
+    return Math.sqrt(arg)
+}
+function sin(arg){
+    return Math.sin(arg)
+}
+function cos(arg){
+    return Math.cos(arg)
 }
 module.exports ={
-    add,mul,sub,div
+    add,mul,sub,div,square,root,sin,cos
 }

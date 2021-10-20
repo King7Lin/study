@@ -15,10 +15,10 @@
       <view class="btn orange" bindtap='opbtn' data-val='+'>+</view>
     </view>
     <view class="btnrow">
-      <view class="btn orange" bindtap="opbtn">平方</view>
-      <view class="btn orange" bindtap="opbtn">开方</view>
-      <view class="btn orange" bindtap="opbtn">sin</view>
-      <view class="btn orange" bindtap="opbtn">cos</view>
+      <view class="btn orange" bindtap="opbtn" data-val="square">平方</view>
+      <view class="btn orange" bindtap="opbtn" data-val="root">开方</view>
+      <view class="btn orange" bindtap="opbtn" data-val="sin">sin</view>
+      <view class="btn orange" bindtap="opbtn" data-val="cos">cos</view>
     </view>
     <view class="btnrow">
       <view class="btn blue" bindtap='numbtn' data-val="7">7</view>
