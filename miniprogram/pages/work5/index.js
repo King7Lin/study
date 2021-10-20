@@ -1,3 +1,4 @@
+const calc=require('calc.js')
 Page({
   data:{
     num:'0',
@@ -35,7 +36,7 @@ Page({
       num
     })
   },
-  datbtn(){
+  dotbtn(){
     let num =this.data.num
     if(num.indexOf('.')>=0){
       return
@@ -63,17 +64,25 @@ Page({
       return
     }
     if(op=='+'){
-      this.lastNum+=curNum
+      this.lastNum =calc.add(this.lastNum,curNum)
     }else if(op=='-'){
-      this.lastNum-=curNum
+      this.lastNum =calc.sub(this.lastNum,curNum)
     }else if(op=='*'){
-      this.lastNum*=curNum
+      this.lastNum=calc.mul(this.lastNum,curNum)
     }else if(op=='/'){
-      this.lastNum/=curNum
+      this.lastNum =calc.div(this.lastNum,curNum)
     }else if(op=='%'){
       this.lastNum%=curNum
     }else if(op=='='){
       this.lastNum=curNum
+    }else if(op=='平方'){
+
+    }else if(op=='开方'){
+
+    }else if(op=='sin'){
+
+    }else if(op=='cos'){
+      
     }
     this.setData({
       num:this.lastNum
