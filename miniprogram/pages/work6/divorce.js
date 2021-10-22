@@ -1,3 +1,4 @@
+var num=0
 Page({
     data:{
         fei:300,
@@ -7,7 +8,7 @@ Page({
     
     switchchange(e){
         console.log(e)
-        var num=Math.random()+1
+        num=Math.random()+1
         this.setData({
             condition:e.detail.value
         })
