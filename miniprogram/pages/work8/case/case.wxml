@@ -1,2 +1,8 @@
-<!--pages/work8/case/case.wxml-->
-<text>pages/work8/case/case.wxml</text>
+<import src="../template/template.wxml"/>
+<view class="page">
+  <template is='header'></template>
+  <view class="body">
+    <video src="http://www.gdmec.edu.cn/__local/B/7A/A8/33FAFA2A32ECA6C48ACA9B12075_ECCF5224_8610958.mp4" autoplay="true"></video>
+  </view>
+  <template is='footer'></template>
+</view>
