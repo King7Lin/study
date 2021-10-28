@@ -36,6 +36,12 @@
 .l4{
   flex: 1;
 }
+.l5{
+  flex: 3;
+}
+.l6{
+  flex: 1;
+}
 .right{
   flex: 1;
   display: flex;

@@ -1,1 +1,3 @@
-/* pages/work8/template/template.wxss */
+.foot{
+  text-align: center;
+}

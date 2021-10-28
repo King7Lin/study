@@ -2,7 +2,7 @@
 <view class="page">
   <template is='header'></template>
   <view class="body">
-    <video src="http://www.gdmec.edu.cn/__local/B/7A/A8/33FAFA2A32ECA6C48ACA9B12075_ECCF5224_8610958.mp4" autoplay="true"></video>
+    <video src="http://www.gdmec.edu.cn/__local/B/7A/A8/33FAFA2A32ECA6C48ACA9B12075_ECCF5224_8610958.mp4" style="width: 100%;" autoplay="true"></video>
   </view>
-  <template is='footer'></template>
+  <template is='footer'/>
 </view>

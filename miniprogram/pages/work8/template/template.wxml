@@ -11,7 +11,7 @@
 </template>
 <template name="footer">
   <view class="foot">
-    点击右侧，联系客服=><contact-button size='27'></contact-button>
+    点击右侧，联系客服=> <contact-button size='27'></contact-button>
   </view>
 </template>
 
