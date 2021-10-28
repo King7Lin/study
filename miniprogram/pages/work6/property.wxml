@@ -1,6 +1,7 @@
 <view class="page">
     <view class="body">
         <form bindsubmit="formsubmit">
+            <view><switch bindchange="switchchange">是否是外星人</switch></view>
             <text>财产标的金额（单位元）</text>
             <input type="number" name="property" placeholder="标的金额"/>
             <button form-type="submit" type="primary">计算</button>

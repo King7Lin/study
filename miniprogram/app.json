@@ -13,7 +13,9 @@
     "pages/work8/case/case",
     "pages/work8/map/map",
     "pages/work8/person/person",
-    "pages/work8/template/template"
+    "pages/work8/template/template",
+    "pages/work8/leader/leader",
+    "pages/work8/scenery/scenery"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
