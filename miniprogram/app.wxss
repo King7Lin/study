@@ -198,6 +198,18 @@ page {
 .l6{
   flex: 1;
 }
+.l7{
+  flex: 3;
+}
+.l8{
+  flex: 1;
+}
+.l9{
+  flex: 3;
+}
+.l10{
+  flex: 1;
+}
 .right{
   flex: 1;
   display: flex;
@@ -214,6 +226,7 @@ page {
   border: 1px solid black;
 }
 .foot{
+  margin-top: 100%;
   background-color: lightgrey;
   text-align: center;
 }

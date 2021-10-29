@@ -1,12 +1,64 @@
-<import src="..template/template.wxml"/>
+<import src="../template/template.wxml"/>
 <view class="page">
-  <template is='header'></template>
   <view class="body">
     <view class="left">
       <view class="l1">
+        <image src="../images/蓝祥龙.jpg"></image>
+      </view>
+      <view class="l2">
+        <text>党委委员、副院长 陈冬梅</text>
+      </view>
+      <view class="l3">
+        <image src="../images/陈今来.jpg"></image>
+      </view>
+      <view class="l4">
+        <text>党委委员、副院长 陈冬梅</text>
+      </view>
+      <view class="l5">
+        <image src="../images/陈力捷.jpg"></image>
+      </view>
+      <view class="l6">
+        <text>党委委员、副院长 陈冬梅</text>
+      </view>
+      <view class="l7">
+        <image src="../images/漆军.jpg"></image>
+      </view>
+      <view class="l8">
+        <text>党委委员、副院长 陈冬梅</text>
+      </view>
+      <view class="l9">
+        <image src="../images/谢臣英.jpg"></image>
+      </view>
+      <view class="l10">
+        <text>党委委员、副院长 陈冬梅</text>
+      </view>
+    </view>
+    <view class="right">
+      <view class="l1">
+        <image src="../images/郑伟光.jpg"></image>
+      </view>
+      <view class="l2">
+        <text>党委委员、副院长 陈冬梅</text>
+      </view>
+      <view class="l3">
+        <image src="../images/苏卫东.jpg"></image>
+      </view>
+      <view class="l4">
+        <text>党委委员、副院长 陈冬梅</text>
+      </view>
+      <view class="l5">
         <image src="../images/陈冬梅.jpg"></image>
+      </view>
+      <view class="l6">
+        <text>党委委员、副院长 陈冬梅</text>
+      </view>
+      <view class="l7">
+        <image src="../images/刘从兵.jpg"></image>
+      </view>
+      <view class="l8">
+        <text>党委委员、副院长 陈冬梅</text>
       </view>
     </view>
   </view>
-  <template is='fppter'></template>
+  <template is='footer'/>
 </view>
