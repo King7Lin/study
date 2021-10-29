@@ -1,74 +1,80 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "id": -1,
-          "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide",
-          "query": ""
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "id": -1,
-          "name": "pages/work4/index",
-          "pathName": "pages/work4/index",
-          "query": "",
-          "scene": null
+        "game": {
+            "list": []
         },
-        {
-          "id": -1,
-          "name": "pages/test/test",
-          "pathName": "pages/test/test",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
         },
-        {
-          "name": "pages/work4 copy/index",
-          "pathName": "pages/work4 copy/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/work5/index",
-          "pathName": "pages/work5/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/work6/property",
-          "pathName": "pages/work6/property",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/work6/divorce",
-          "pathName": "pages/work6/divorce",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/work1/index",
-          "pathName": "pages/work1/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/work8/Index/index",
-          "pathName": "pages/work8/Index/index",
-          "query": "",
-          "scene": null
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "db guide",
+                    "pathName": "pages/databaseGuide/databaseGuide",
+                    "query": ""
+                },
+                {
+                    "id": -1,
+                    "name": "pages/work4/index",
+                    "pathName": "pages/work4/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "id": -1,
+                    "name": "pages/test/test",
+                    "pathName": "pages/test/test",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/work4 copy/index",
+                    "pathName": "pages/work4 copy/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/work5/index",
+                    "pathName": "pages/work5/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/work6/property",
+                    "pathName": "pages/work6/property",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/work6/divorce",
+                    "pathName": "pages/work6/divorce",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/work1/index",
+                    "pathName": "pages/work1/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/work8/Index/index",
+                    "pathName": "pages/work8/Index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/work7/index",
+                    "pathName": "pages/work7/index",
+                    "query": "",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }

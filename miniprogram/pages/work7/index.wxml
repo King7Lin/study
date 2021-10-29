@@ -1,0 +1,13 @@
+<view class="content">
+    <view class="search">
+        <text>城市编码</text>
+        <input type="number" bindinput="input" placeholder="6位数城市编码" />
+        <icon type="search" bindtap="search"></icon>
+    </view>
+    <view>
+        <view>城市编码为:{{distinct_id}}</view>
+        <view>城市:{{city}}</view>
+        <view>气温:{{temp}}</view>
+        <view>风向:{{wind_dir}}</view>
+    </view>
+</view>

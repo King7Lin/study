@@ -1,2 +1,12 @@
-<!--pages/work8/leader/leader.wxml-->
-<text>pages/work8/leader/leader.wxml</text>
+<import src="..template/template.wxml"/>
+<view class="page">
+  <template is='header'></template>
+  <view class="body">
+    <view class="left">
+      <view class="l1">
+        <image src="../images/陈冬梅.jpg"></image>
+      </view>
+    </view>
+  </view>
+  <template is='fppter'></template>
+</view>
