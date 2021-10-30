@@ -37,7 +37,7 @@
                     <view class="l2">
                         <text>学院视频</text>
                     </view>
-                    <view class="l3" bindtap="phone">
+                    <view class="l3" bindtap="phone" >
                         <image class="pic1" src="../images/4.png"></image>
                     </view>
                     <view class="l4">

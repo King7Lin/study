@@ -1,2 +1,14 @@
-<!--pages/work8/scenery/scenery.wxml-->
-<text>pages/work8/scenery/scenery.wxml</text>
+<import src="../template/template.wxml"/>
+<view style="width: 100%;height: 100vh;display: inline-block;">
+  <swiper indicator-dots autoplay="true" interval="5000" duration="1000" bindchange="bindchange" style="height: 90vh;">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item.src}}" mode="scaleToFill" class="pic"/>
+        <view style="font-size: 18px;width:{{width}}px;padding:10rpx; color: black; font-weight: 800; padding: 2px 0;background:rgba(0,0,0,0.4);position: absolute;bottom:5%;left:35%;transform:translateX(0%);text-align:left;">
+        <text style="color:#FFFFFF;">{{content}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <template is='footer'/>
+</view>

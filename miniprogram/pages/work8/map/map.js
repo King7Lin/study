@@ -1,11 +1,27 @@
 Page({
     data:{
         markers:[{
-            iconPath:'../images/mark.png',
+            icon:"../images/mark.png",
             id:0,
-            latitude:23.3882,
-            longitude:113.4490,
-            title:'图文楼',
-        }],
+            latitude:23.387760389011408,
+            longitude:113.4467249057083,
+            label:{
+                content:'图文中心',
+                color:'#000',
+                textAlign:'center'
+            }
+        },
+        {
+            icon:"../images/mark.png",
+            id:1,
+            latitude:23.383092663398322,
+            longitude:113.44945003006742,
+            label:{
+                content:'第三饭堂',
+                color:'#000',
+                textAlign:'center'
+            }
+        },
+    ],
     }
 })

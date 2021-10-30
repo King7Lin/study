@@ -3,31 +3,31 @@
   <view class="body">
     <view class="left">
       <view class="l1">
-        <image src="../images/蓝祥龙.jpg"></image>
+        <image class="pic1" src="../images/lanxianglong.jpg"></image>
       </view>
       <view class="l2">
         <text>党委委员、副院长 陈冬梅</text>
       </view>
       <view class="l3">
-        <image src="../images/陈今来.jpg"></image>
+        <image class="pic1" src="../images/chenjinlai.jpg"></image>
       </view>
       <view class="l4">
         <text>党委委员、副院长 陈冬梅</text>
       </view>
       <view class="l5">
-        <image src="../images/陈力捷.jpg"></image>
+        <image class="pic1" src="../images/chenlijie.jpg"></image>
       </view>
       <view class="l6">
         <text>党委委员、副院长 陈冬梅</text>
       </view>
       <view class="l7">
-        <image src="../images/漆军.jpg"></image>
+        <image class="pic1" src="../images/qijun.jpg"></image>
       </view>
       <view class="l8">
         <text>党委委员、副院长 陈冬梅</text>
       </view>
       <view class="l9">
-        <image src="../images/谢臣英.jpg"></image>
+        <image class="pic1" src="../images/xiechenying.jpg"></image>
       </view>
       <view class="l10">
         <text>党委委员、副院长 陈冬梅</text>
@@ -35,30 +35,30 @@
     </view>
     <view class="right">
       <view class="l1">
-        <image src="../images/郑伟光.jpg"></image>
+        <image class="pic1" src="../images/zhengweiguang.jpg"></image>
       </view>
       <view class="l2">
         <text>党委委员、副院长 陈冬梅</text>
       </view>
       <view class="l3">
-        <image src="../images/苏卫东.jpg"></image>
+        <image class="pic1" src="../images/suweidong.jpg"></image>
       </view>
       <view class="l4">
         <text>党委委员、副院长 陈冬梅</text>
       </view>
       <view class="l5">
-        <image src="../images/陈冬梅.jpg"></image>
+        <image class="pic1" src="../images/chendongmei.jpg"></image>
       </view>
       <view class="l6">
         <text>党委委员、副院长 陈冬梅</text>
       </view>
       <view class="l7">
-        <image src="../images/刘从兵.jpg"></image>
+        <image class="pic1" src="../images/liucongbing.jpg"></image>
       </view>
       <view class="l8">
         <text>党委委员、副院长 陈冬梅</text>
       </view>
     </view>
   </view>
-  <template is='footer'/>
+
 </view>

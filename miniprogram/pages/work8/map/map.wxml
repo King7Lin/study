@@ -1,1 +1,4 @@
-<map id="map" longitude="113.4500" latitude="23.3860" markers="{{markers}}" scale="18" style="width: 100%; height: 300px;"></map>
+<import src="../template/template.wxml"/>
+<map id="map" longitude="113.44740082238005" latitude="23.38493416972477" markers="{{markers}}" scale="16" style="width: 100%; height: 500px;"></map>
+<template is='footer'/>
+

@@ -9,9 +9,10 @@
     </swiper>
   </view>
 </template>
+
 <template name="footer">
-  <view class="foot">
-    点击右侧，联系客服=> <contact-button size='27'></contact-button>
+  <view class="foot" >
+     <button open-type="contact" style="width: 100%;" type="primary">点击此处，联系客服</button>
   </view>
 </template>
 
