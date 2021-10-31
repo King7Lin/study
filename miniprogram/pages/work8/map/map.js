@@ -17,7 +17,7 @@ Page({
             latitude:23.383092663398322,
             longitude:113.44945003006742,
             label:{
-                content:'第三饭堂',
+                content:'三饭',
                 color:'#000',
                 textAlign:'center'
             }

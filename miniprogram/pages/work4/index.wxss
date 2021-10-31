@@ -1,5 +1,5 @@
 /* miniprogram/pages/work4/index.wxss */
-.body{
+.body1{
   margin: 20rpx;
 }
 .tab{

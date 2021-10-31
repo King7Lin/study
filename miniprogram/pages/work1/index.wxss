@@ -1,1 +1,20 @@
-/* miniprogram/pages/work1/index.wxss */
+navigator{
+  margin: 5rpx;
+  padding: 10px;
+  background-color: rgb(204, 207, 207);
+  border-top: 1px solid rgb(180, 177, 177);
+  border-bottom: 1px solid rgb(180, 177, 177);
+}
+.navigator-hover {
+  color:blue;
+  background-color: rgb(251, 255, 255);
+}
+.other-navigator-hover {
+  color:red;
+}
+.exitbtn{
+  margin: auto;
+  padding: 10rpx 80rpx;
+  background-color: rgb(12, 11, 11);
+  color: #fff;
+}

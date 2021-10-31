@@ -1,5 +1,5 @@
 <!--miniprogram/pages/work4/index.wxml-->
-<view class="body">
+<view class="body1">
     <view class="tab">
       <view wx:for="{{list}}" wx:key="this"  bindtap='click' data-id="{{index}}" class='sheet {{item.active?"active":""}}'>{{item.name}}</view>
       

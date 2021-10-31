@@ -1,5 +1,5 @@
 <!--miniprogram/pages/work4/index.wxml-->
-<view class="body">
+<view class="body1">
     <view class="tab">
       <view bindtap='c' class='sheet {{btnc?"active":""}}'>C</view>
       <view bindtap='d' class='sheet {{btnd?"active":""}}'>D</view>

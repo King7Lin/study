@@ -73,12 +73,6 @@
           "pathName": "pages/work7/index",
           "query": "",
           "scene": null
-        },
-        {
-          "name": "pages/work8/scenery/scenery",
-          "pathName": "pages/work8/scenery/scenery",
-          "query": "",
-          "scene": null
         }
       ]
     }
