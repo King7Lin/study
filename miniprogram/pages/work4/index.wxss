@@ -12,7 +12,7 @@ background-image: linear-gradient();
 border: 2rpx solid rgba(0,0,0,0.2);
 border-radius: 9rpx;
 text-align: center;
-color: white;
+color: #000;
 font-weight: bold;
 }
 .active{

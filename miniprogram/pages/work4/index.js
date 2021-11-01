@@ -1,6 +1,6 @@
 Page({
   data:{
-    btnc:false,
+    btnc:true,
     btnd:false,
     btne:false,
     btnf:false,
