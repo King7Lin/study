@@ -1,10 +1,10 @@
 <!--miniprogram/pages/work1/index.wxml-->
 <view class="sn" style="margin: auto; font-weight: bold;" >07201104陈杰麟</view>
-<navigator class="work2" url="/pages/work2/index">work2 惊喜不惊喜 <text>></text></navigator>
-<navigator class="work3" url="/pages/work3/index">work3 比大小<text>></text></navigator>
-<navigator class="work4" url="/pages/work4/index">work4 尤克里里<text>></text></navigator>
-<navigator class="work4" url="/pages/work4 copy/index">work4 尤克里里 copy <text>></text></navigator>
-<navigator class="work5" url="/pages/work5/index">work5 计算器<text>></text></navigator>
-<navigator class="work7" url="/pages/work7/index">work7 天气预报<text>></text></navigator>
-<navigator class="work8" url="/pages/work8/Index/index">work8 机电微官网<text>></text></navigator>
+<navigator class="work2" url="/pages/work2/index">work2 惊喜不惊喜 <text>-></text></navigator>
+<navigator class="work3" url="/pages/work3/index">work3 比大小<text>-></text></navigator>
+<navigator class="work4" url="/pages/work4/index">work4 尤克里里<text>-></text></navigator>
+<navigator class="work4" url="/pages/work4 copy/index">work4 尤克里里 copy <text>-></text></navigator>
+<navigator class="work5" url="/pages/work5/index">work5 计算器<text>-></text></navigator>
+<navigator class="work7" url="/pages/work7/index">work7 天气预报<text>-></text></navigator>
+<navigator class="work8" url="/pages/work8/Index/index">work8 机电微官网<text>-></text></navigator>
 <navigator class="exitbtn" open-type="exit" target="miniProgram">退出</navigator>
