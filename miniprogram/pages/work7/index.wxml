@@ -7,7 +7,9 @@
     <view>
         <view>城市编码为:{{distinct_id}}</view>
         <view>城市:{{city}}</view>
-        <view>气温:{{temp}}</view>
+        <view>气温:{{tmp}}</view>
         <view>风向:{{wind_dir}}</view>
+        <view>经度:{{longitue}}</view>
+        <view>纬度:{{latiude}}</view>
     </view>
 </view>
