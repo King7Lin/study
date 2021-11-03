@@ -1,13 +1,14 @@
-const baseurl='https://free-api.heweather.net/s6/weather?key=b98d5bd54c4d417bb169b189b24f4bb8&days=5&location='
+const baseurl='https://free-api.heweather.net/s6/weather?key=b98d5bd54c4d417bb169b189b24f4bb8&days=7&location='
 Page({
     data:{
         distinct_id:'',
-        city:'',
+        location:'',
         tmp_min:'',
         tmp_max:'',
         cond_txt_d:'',
         wind_dir:'',
         vis:'',
+        time:'',
         latitude:0,
         longitude:0,
     },
@@ -26,13 +27,13 @@ Page({
             url,
             success(e){
                 console.log(e)
+                let time=e.data.HeWeather6[0].update.loc
                 let {vis,tmp_min,tmp_max,wind_dir,cond_txt_d}=e.data.HeWeather6[0].daily_forecast[0]
-                let city=e.data.HeWeather6[0].basic.location
+                let location=e.data.HeWeather6[0].basic.location
                 that.setData({
-                    tmp_min,tmp_max,wind_dir,city,vis,cond_txt_d
+                    tmp_min,tmp_max,wind_dir,location,vis,cond_txt_d,time
                 })
-
-            }
+            },
         })
     },
     onLoad(){
