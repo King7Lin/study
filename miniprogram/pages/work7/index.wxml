@@ -6,7 +6,6 @@
       <view class='wrapper'>
         <image src='images/search.png'></image>
         <input bindinput="input" placeholder-class='placeholderClass' confirm-type='search' bindconfirm='commitSearch' placeholder='请输入城市名，快速查询天气信息' maxlength='20'></input>
-        <!-- <icon type='search' bindtap='search'></icon> -->
       </view>
     </view>
   <view class='info' wx:if="{{arr}}">
