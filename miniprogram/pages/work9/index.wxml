@@ -5,7 +5,7 @@
             <text> 收入</text>
         </view>
         <view class='tab {{isincome?"":"selected"}}' bindtap="click" data-name="pay">
-            <text>支出</text>
+            <text>支出0</text>
         </view>
 
         <text></text>
