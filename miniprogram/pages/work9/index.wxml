@@ -7,6 +7,8 @@
         <view class='tab {{isincome?"":"selected"}}' bindtap="click" data-name="pay">
             <text>支出</text>
         </view>
+
+        <text></text>
     </view>
     <!-- 收入列表 -->
     <view wx:if="{{isincome}}">
