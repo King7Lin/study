@@ -9,7 +9,7 @@ Page({
       {name:'A',active:false},
       {name:'B',active:false},
     ],
-    src:'images/c.png'
+    src:'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work4/c.png'
   },
   click(e){
     console.log(e)
