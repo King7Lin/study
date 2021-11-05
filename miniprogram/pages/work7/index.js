@@ -1,9 +1,19 @@
+import * as echarts from '../ec-canvas/echarts';
+
+let app = getApp();
 const baseurl='https://free-api.heweather.net/s6/weather?key=b98d5bd54c4d417bb169b189b24f4bb8&days=7&location='
-var arr=[]
+var arr0=[]
 var arr1=[]
 var arr2=[]
 Page({
     data:{
+        search_city: '',
+        imgsrc:100,
+        tmp24time: [],
+        time24: [],
+        timeWeek: [], // 日期
+        maxTmpWeek: [], // 最大温度列表
+        minTmpWeek: [], // 最小温度列表
         tmp:'',
         distinct_id:'',
         location:'',
@@ -47,7 +57,6 @@ Page({
           this.setData({
             distinct_id:e.detail.value
         })
-        
     },
     search(){
         let distinct_id=this.data.distinct_id
@@ -61,12 +70,11 @@ Page({
                 let tmp=e.data.HeWeather6[0].now.tmp
                 let {vis,cond_txt_d}=e.data.HeWeather6[0].daily_forecast[0]
                 let location=e.data.HeWeather6[0].basic.location
-                arr.push(e.data.HeWeather6[0].daily_forecast)
+                arr0.push(e.data.HeWeather6[0].daily_forecast)
                 arr1.push(e.data.HeWeather6[0].hourly)
                 arr2.push(e.data.HeWeather6[0].lifestyle)
-                console.log(arr2)
                 that.setData({
-                    arr2,arr1,arr, tmp,location,vis,cond_txt_d,time,
+                    arr2,arr1,arr0, tmp,location,vis,cond_txt_d,time,
                 })
                 if (e.data.HeWeather6[0].now.cond_txt.indexOf('晴') >= 0) {
                     that.setData({
@@ -97,11 +105,63 @@ Page({
                       bcgImg: that.data.bcgImgList[6].src,
                     })
                   }
+
+                var app = getApp()
+                var hour = e.data.HeWeather6[0].hourly
+                var hourly = []
+                var tmp24time = []
+                var time24 = []
+                for (var i = 0; i < hour.length; i++) {
+                  tmp24time[i] = hour[i].tmp,
+                  time24[i] = hour[i].time.substring(11),
+                  hourly[i] = {
+                    "imgsrc": hour[i].cond_code,
+                    "tmp": hour[i].tmp,
+                    "time": hour[i].time.substring(11),
+                    "wind_dir": hour[i].wind_dir,
+                    "wind_sc": hour[i].wind_sc
+                  }
+                }
+                that.setData({
+                  hourly: hourly
+                })
+                app.globalData.tmp24time = tmp24time
+                app.globalData.time24 = time24
+                var weekArray = new Array("周日", "周一", "周二", "周三", "周四", "周五", "周六");
+
+
+                    var day = e.data.HeWeather6[0].daily_forecast
+                    var daily_forecast = []
+                    var timeWeek = [] // 日期
+                    var maxTmpWeek= [] // 最大温度列表
+                    var minTmpWeek= [] // 最小温度列表
+                    for (var i = 0; i < day.length; i++) {
+                      timeWeek[i] = i == 0 ? "今天" : weekArray[new Date(day[i].date).getDay()]
+                      maxTmpWeek[i] = day[i].tmp_max
+                      minTmpWeek[i] = day[i].tmp_min
+                      daily_forecast[i] = {
+                        d_txt: i == 0 ? "今天" : weekArray[new Date(day[i].date).getDay()],
+                        d_date: day[i].date.substring(5),
+                        imgsrc_d: day[i].cond_code_d,
+                        imgsrc_n: day[i].cond_code_n,
+                        wind_dir: day[i].wind_dir,
+                        wind_sc: day[i].wind_sc,
+                        tmp_max: day[i].tmp_max,
+                        tmp_min: day[i].tmp_min,
+                        cond_txt_d: day[i].cond_txt_d
+                      }
+                    }
+                    that.setData({
+                      daily_forecast: daily_forecast,
+                      timeWeek:timeWeek,
+                      maxTmpWeek:maxTmpWeek,
+                      minTmpWeek:minTmpWeek
+                    })
+                    app.globalData.timeWeek = timeWeek
+                    app.globalData.maxTmpWeek = maxTmpWeek
+                    app.globalData.minTmpWeek = minTmpWeek
             },
         })
-        arr=[]
-        arr1=[]
-        arr2=[]
     },
     commitSearch (res) {  // 点击键盘上的搜索
         let val = ((res.detail || {}).value || '').replace(/\s+/g, '')
@@ -111,12 +171,23 @@ Page({
         let that =this
         wx.getLocation({
           success(e){
-              console.log(e)
+              // console.log(e)
               let {latitude,longitude} = e
               that.setData({
                 latitude,longitude
               })
           }
         })
+        
+    },
+    to24tmpChart: function(){
+      wx.navigateTo({
+        url: '24hour/index'
+      })
+    },
+    to7tmpChart: function(){
+      wx.navigateTo({
+        url: '7days/index'
+      })
     }
 })

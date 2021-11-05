@@ -7,7 +7,7 @@ Page({
     btng:false,
     btna:false,
     btnb:false,
-    src:'images/c.png'
+    src:'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work4/c.png'
   },
   c(){
     this.setData({
@@ -18,7 +18,7 @@ Page({
       btng:false,
       btna:false,
       btnb:false,
-      src:'images/c.png'
+      src:'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work4/c.png'
     })
   },
   d(){
@@ -30,7 +30,7 @@ Page({
       btng:false,
       btna:false,
       btnb:false,
-      src:'images/d.png'
+      src:'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work4/d.png'
     })
   },
   e(){
@@ -42,7 +42,7 @@ Page({
       btng:false,
       btna:false,
       btnb:false,
-      src:'images/e.png'
+      src:'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work4/e.png'
     })
   },
   f(){
@@ -54,7 +54,7 @@ Page({
       btng:false,
       btna:false,
       btnb:false,
-      src:'images/f.png'
+      src:'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work4/f.png'
     })
   },
   g(){
@@ -66,7 +66,7 @@ Page({
       btng:true,
       btna:false,
       btnb:false,
-      src:'images/g.png'
+      src:'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work4/g.png'
     })
   },
   a(){
@@ -78,7 +78,7 @@ Page({
       btng:false,
       btna:true,
       btnb:false,
-      src:'images/a.png'
+      src:'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work4/a.png'
     })
   },
   b(){
@@ -90,7 +90,7 @@ Page({
       btng:false,
       btna:false,
       btnb:true,
-      src:'images/b.png'
+      src:'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work4/b.png'
     })
   },
 })

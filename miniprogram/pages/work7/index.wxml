@@ -9,7 +9,7 @@
         <!-- <icon type='search' bindtap='search'></icon> -->
       </view>
     </view>
-  <view class='info' wx:if="{{arr}}">
+  <view class='info' wx:if="{{arr0}}">
       <view class='city'>
           <view class='val'>{{location}}</view>
           <view class='message' style="position: absolute; right: 0;font-size: 30rpx">{{time}}更新</view>
@@ -20,32 +20,21 @@
         <text>能见度 {{vis}}</text>
       </view>
   </view>
-    <view class='guide' wx:if="{{arr}}">
-      <view class='title'>7 天预报</view>
+    <view class='guide' wx:if="{{arr0}}">
+      <view class='title' style="font-weight: bold;">7 天预报</view>
       <view class='guides'>
-        <view class='item' wx:for='{{arr[0]}}' wx:for-item="arr">
+        <view class='item' wx:for='{{arr0[0]}}' wx:for-item="arr">
           <view class='date i'>{{arr.date}}</view>
           <view class='temperature i'>{{arr.tmp_max}}~{{arr.tmp_min}}℃</view>
-          <!-- <view class='weather i'> -->
             <text>{{arr.cond_txt_d}}</text>
-            <!-- <image mode='widthFix' ></image> -->
-          <!-- </view> -->
           <view class='wind i'>{{arr.wind_dir}}{{arr.wind_sc}}级</view>
         </view>
       </view>
+      <button class="tmpButton" bindtap="to7tmpChart" style="width: 100%; margin-bottom: 20rpx;">未来7天温度趋势图</button>
     </view>
-    <!-- 降雨 -->
-    <view class='guide' wx:if="{{yu}}">
-      <view class='title'>降雨值</view>
-      <view class='guides'>
-        <view class='item' wx:for='{{arr[0]}}' wx:for-item="arr">
-          
-        </view>
-      </view>
-    </view>
-    <!-- 3小时更新信息 -->
+
     <view class='guide' wx:if="{{arr1}}">
-      <view class='title'>24小时每3小时天气</view>
+      <view class='title' style="font-weight: bold;">24小时每3小时天气</view>
       <view class="row1" bindchange="bindchange">
         <view class='details'  wx:for='{{arr1[0]}}' wx:for-item="arr1">
           <view class="row2">
@@ -62,8 +51,9 @@
                 <view>{{arr1.hum}}</view>
               </view>
               <view class='detail'>
-                <view>降水量(mm)</view>
-                <view>{{arr1.pcpn}}</view>
+                <view>降水概率</view>
+                <view wx:if="{{arr1.pop}}">{{arr1.pop}}</view>
+                <view wx:if="{{!arr1.pop}}">0</view>
               </view>
             </view>
             <view class="row2">
@@ -97,59 +87,62 @@
             <text style="margin-left:35%;">{{arr1.time}}</text>
           </view>
       </view>
+      <button class="tmpButton" bindtap="to24tmpChart" style="width: 100%; margin-bottom: 20rpx;">未来24小时温度趋势图</button>
     </view>
       <!-- 生活指数 -->
       <view class='guide' wx:if="{{arr2}}" >
       <view class='title'>生活指数</view>
-      <view class='life' wx:for='{{arr2[0]}}' >
+      <view class='life'>
         <view class='Sitem'>
           <view class='Sright'>
-            <view class='key'><text>舒适度指数 :{{arr2[0].brf}}</text></view>
-            <view class='value'>{{arr2[0].txt}}</view>
+            <view class='Skey'><text class="Stext">舒适度指数 :</text>{{arr2[0][0].brf}}</view>
+            <view class='value'>{{arr2[0][0].txt}}</view>
           </view>
         </view>
         <view class='Sitem'>
           <view class='Sright'>
-            <view class='key'><text>穿衣指数 :{{arr2[0][1].brf}}</text></view>
+            <view class='Skey'><text class="Stext">穿衣指数 :</text>{{arr2[0][1].brf}}</view>
             <view class='value'>{{arr2[0][1].txt}}</view>
           </view>
         </view>
         <view class='Sitem'>
           <view class='Sright'>
-            <view class='key'><text>感冒指数: {{arr2[0][2].brf}}</text></view>
+            <view class='Skey'><text class="Stext">感冒指数: </text>{{arr2[0][2].brf}}</view>
             <view class='value'>{{arr2[0][2].txt}}</view>
           </view>
         </view>
         <view class='Sitem'>
           <view class='Sright'>
-            <view class='key'><text>运动指数: {{arr2[0][3].brf}}</text></view>
+            <view class='Skey'><text class="Stext">运动指数: </text>{{arr2[0][3].brf}}</view>
             <view class='value'>{{arr2[0][3].txt}}</view>
           </view>
         </view>
         <view class='Sitem'>
           <view class='Sright'>
-            <view class='key'><text>旅游指数 :{{arr2[0][4].brf}}</text></view>
+            <view class='Skey'><text class="Stext">旅游指数 :</text>{{arr2[0][4].brf}}</view>
             <view class='value'>{{arr2[0][4].txt}}</view>
           </view>
         </view>
         <view class='Sitem'>
           <view class='Sright'>
-            <view class='key'><text>紫外线指数: {{arr2[0][5].brf}}</text></view>
+            <view class='Skey'><text class="Stext">紫外线指数:</text> {{arr2[0][5].brf}}</view>
             <view class='value'>{{arr2[0][5].txt}}</view>
           </view>
         </view>
         <view class='Sitem'>
           <view class='Sright'>
-            <view class='key'><text>洗车指数 :{{arr2[0][6].brf}}</text></view>
+            <view class='Skey'><text class="Stext">洗车指数 :</text>{{arr2[0][6].brf}}</view>
             <view class='value'>{{arr2[0][6].txt}}</view>
           </view>
         </view>
         <view class='Sitem'>
           <view class='Sright'>
-            <view class='key'><text>空气污染指数 :{{arr2[0][7].brf}}</text></view>
+            <view class='Skey'><text class="Stext">空气污染指数 :</text>{{arr2[0][7].brf}}</view>
             <view class='value'>{{arr2[0][7].txt}}</view>
           </view>
         </view>
       </view>
     </view>
+    
+    <!-- <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ec}}"></ec-canvas> -->
 </view>

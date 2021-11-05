@@ -7,4 +7,6 @@
 <navigator class="work5" url="/pages/work5/index">work5 计算器<text>-></text></navigator>
 <navigator class="work7" url="/pages/work7/index">work7 天气预报<text>-></text></navigator>
 <navigator class="work8" url="/pages/work8/Index/index">work8 机电微官网<text>-></text></navigator>
+<navigator class="work9" url="/pages/work9/index">work9<text>-></text></navigator>
+<navigator class="work10" url="/pages/work7/button/index">work11 测试<text>-></text></navigator>
 <navigator class="exitbtn" open-type="exit" target="miniProgram">退出</navigator>

@@ -19,7 +19,7 @@ Page({
       v.active=false
     })
     l[num].active=true
-    let src='images/'+l[num].name.toLowerCase()+'.png'
+    let src='cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work4/'+l[num].name.toLowerCase()+'.png'
     this.setData({
       list:l,
       src
