@@ -1,34 +1,155 @@
 <view class="content">
-    <view class='bcg' style='background: #0085e5'></view>
-    <image src="images/qing.jpg" class="bcg" mode="aspectFill"></image>
+    <view class='bcg' wx:if='{{!bcgImg}}' style='background: {{bcgColor}}'></view>
+    <image wx:if='{{!bcgImg}}' src="cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work7/bg5.jpg" class="bcg" mode="aspectFill"></image>
+    <image wx:if='{{bcgImg}}' src="{{bcgImg}}" class="bcg" mode="aspectFill"></image>
     <view class='search' style='background:rgba(255, 255, 255, 0)'>
-    <view class='wrapper'>
-      <image src='images/search.png'></image>
-      <input bindinput="input" placeholder-class='placeholderClass' confirm-type='search' placeholder='请输入城市名，快速查询天气信息' maxlength='20' ></input>
-      <icon type='search' bindtap='search'></icon>
+      <view class='wrapper'>
+        <image src='images/search.png'></image>
+        <input bindinput="input" placeholder-class='placeholderClass' confirm-type='search' bindconfirm='commitSearch' placeholder='请输入城市名，快速查询天气信息' maxlength='20'></input>
+        <!-- <icon type='search' bindtap='search'></icon> -->
+      </view>
     </view>
-  </view>
-  <view class='info'>
+  <view class='info' wx:if="{{arr}}">
       <view class='city'>
           <view class='val'>{{location}}</view>
-          <view class='message' style="position: absolute; right: 0;font-size: 30rpx">{{time}}</view>
+          <view class='message' style="position: absolute; right: 0;font-size: 30rpx">{{time}}更新</view>
       </view>
-      <view class='temp num' decode='true'>{{tmp_max}}<text style='font-size:50rpx;position:relative;top:-20px;'>℃</text></view>
+      <view class='temp num' decode='true'>{{tmp}}<text style='font-size:50rpx;position:relative;top:-20px;'>℃</text></view>
       <view class='weather'>{{cond_txt_d}}</view>
       <view class='pm'>
         <text>能见度 {{vis}}</text>
       </view>
+  </view>
+    <view class='guide' wx:if="{{arr}}">
+      <view class='title'>7 天预报</view>
+      <view class='guides'>
+        <view class='item' wx:for='{{arr[0]}}' wx:for-item="arr">
+          <view class='date i'>{{arr.date}}</view>
+          <view class='temperature i'>{{arr.tmp_max}}~{{arr.tmp_min}}℃</view>
+          <!-- <view class='weather i'> -->
+            <text>{{arr.cond_txt_d}}</text>
+            <!-- <image mode='widthFix' ></image> -->
+          <!-- </view> -->
+          <view class='wind i'>{{arr.wind_dir}}{{arr.wind_sc}}级</view>
+        </view>
+      </view>
     </view>
-
-    <view>
-        <view>城市编码为:{{distinct_id}}</view>
-        <view>城市:{{city}}</view>
-        <view>最高气温:{{tmp_max}}</view>
-        <view>最低气温:{{tmp_min}}</view>
-        <view>风向:{{wind_dir}}</view>
-        <view>天气情况:{{cond_txt_d}}</view>
-        <view>能见度:{{vis}}km</view>
-        <view>经度:{{longitude}}</view>
-        <view>纬度:{{latitude}}</view>
+    <!-- 降雨 -->
+    <view class='guide' wx:if="{{yu}}">
+      <view class='title'>降雨值</view>
+      <view class='guides'>
+        <view class='item' wx:for='{{arr[0]}}' wx:for-item="arr">
+          
+        </view>
+      </view>
+    </view>
+    <!-- 3小时更新信息 -->
+    <view class='guide' wx:if="{{arr1}}">
+      <view class='title'>24小时每3小时天气</view>
+      <view class="row1" bindchange="bindchange">
+        <view class='details'  wx:for='{{arr1[0]}}' wx:for-item="arr1">
+          <view class="row2">
+            <view class='detail'>
+                <view>温度(℃)</view>
+                <view>{{arr1.tmp}}</view>
+              </view>
+              <view  class='detail'>
+                <view>云量</view>
+                <view>{{arr1.cloud}}</view>
+              </view>
+              <view  class='detail'>
+                <view>相对湿度(%)</view>
+                <view>{{arr1.hum}}</view>
+              </view>
+              <view class='detail'>
+                <view>降水量(mm)</view>
+                <view>{{arr1.pcpn}}</view>
+              </view>
+            </view>
+            <view class="row2">
+              <view class='detail'>
+                <view>风向</view>
+                <view>{{arr1.wind_dir}}</view>
+              </view>
+              <view class='detail'>
+                <view>风向角度(deg)</view>
+                <view>{{arr1.wind_deg}}</view>
+              </view>
+              <view class='detail'>
+                <view>风力(级)</view>
+                <view>{{arr1.wind_sc}}</view>
+              </view>
+              <view class='detail'>
+                <view>风速(mk/h)</view>
+                <view>{{arr1.wind_spd}}</view>
+              </view>
+            </view>
+            <view class="row2">
+              <view class='detail'>
+                <view>天气情况</view>
+                <view>{{arr1.cond_txt}}</view>
+              </view>
+              <view class='detail'>
+                <view>气压(mb)</view>
+                <view>{{arr1.pres}}</view>
+              </view>
+            </view>
+            <text style="margin-left:35%;">{{arr1.time}}</text>
+          </view>
+      </view>
+    </view>
+      <!-- 生活指数 -->
+      <view class='guide' wx:if="{{arr2}}" >
+      <view class='title'>生活指数</view>
+      <view class='life' wx:for='{{arr2[0]}}' >
+        <view class='Sitem'>
+          <view class='Sright'>
+            <view class='key'><text>舒适度指数 :{{arr2[0].brf}}</text></view>
+            <view class='value'>{{arr2[0].txt}}</view>
+          </view>
+        </view>
+        <view class='Sitem'>
+          <view class='Sright'>
+            <view class='key'><text>穿衣指数 :{{arr2[0][1].brf}}</text></view>
+            <view class='value'>{{arr2[0][1].txt}}</view>
+          </view>
+        </view>
+        <view class='Sitem'>
+          <view class='Sright'>
+            <view class='key'><text>感冒指数: {{arr2[0][2].brf}}</text></view>
+            <view class='value'>{{arr2[0][2].txt}}</view>
+          </view>
+        </view>
+        <view class='Sitem'>
+          <view class='Sright'>
+            <view class='key'><text>运动指数: {{arr2[0][3].brf}}</text></view>
+            <view class='value'>{{arr2[0][3].txt}}</view>
+          </view>
+        </view>
+        <view class='Sitem'>
+          <view class='Sright'>
+            <view class='key'><text>旅游指数 :{{arr2[0][4].brf}}</text></view>
+            <view class='value'>{{arr2[0][4].txt}}</view>
+          </view>
+        </view>
+        <view class='Sitem'>
+          <view class='Sright'>
+            <view class='key'><text>紫外线指数: {{arr2[0][5].brf}}</text></view>
+            <view class='value'>{{arr2[0][5].txt}}</view>
+          </view>
+        </view>
+        <view class='Sitem'>
+          <view class='Sright'>
+            <view class='key'><text>洗车指数 :{{arr2[0][6].brf}}</text></view>
+            <view class='value'>{{arr2[0][6].txt}}</view>
+          </view>
+        </view>
+        <view class='Sitem'>
+          <view class='Sright'>
+            <view class='key'><text>空气污染指数 :{{arr2[0][7].brf}}</text></view>
+            <view class='value'>{{arr2[0][7].txt}}</view>
+          </view>
+        </view>
+      </view>
     </view>
 </view>
