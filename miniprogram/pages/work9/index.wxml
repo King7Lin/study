@@ -5,11 +5,8 @@
             <text> 收入</text>
         </view>
         <view class='tab {{isincome?"":"selected"}}' bindtap="click" data-name="pay">
-<<<<<<< HEAD
             <text>支出0</text>
-=======
             <text>支出</text>
->>>>>>> c92ab0103c7892157f7a6736bcdefdb6616121d0
         </view>
 
         <text></text>
@@ -29,8 +26,4 @@
 <!-- 底部汇总   -->
 <view class="total">
     收入:{{incometotal}} 支出:{{paytotal}} 余额:{{incometotal-paytotal}}
-<<<<<<< HEAD
 </view>
-=======
-</view>
->>>>>>> c92ab0103c7892157f7a6736bcdefdb6616121d0
