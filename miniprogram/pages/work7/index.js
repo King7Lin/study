@@ -19,7 +19,7 @@ Page({
         location:'',
         tmp_min:'',
         tmp_max:'',
-        cond_txt_d:'',
+        cond_txt:'',
         wind_dir:'',
         vis:'',
         time:'',
@@ -69,17 +69,17 @@ Page({
             url,
             success(e){
                 console.log(e)
-                let time=e.data.HeWeather6[0].update.loc
-                let tmp=e.data.HeWeather6[0].now.tmp
-                let {vis,cond_txt_d}=e.data.HeWeather6[0].daily_forecast[0]
-                let location=e.data.HeWeather6[0].basic.location
-                arr0.push(e.data.HeWeather6[0].daily_forecast)
-                arr1.push(e.data.HeWeather6[0].hourly)
-                arr2.push(e.data.HeWeather6[0].lifestyle)
+                let time=e.data.HeWeather6[0].update.loc         //更新时间   
+                let {tmp,vis,cond_txt}=e.data.HeWeather6[0].now  
+                let location=e.data.HeWeather6[0].basic.location //地点
+                arr0.push(e.data.HeWeather6[0].daily_forecast) //7天预报
+                arr1.push(e.data.HeWeather6[0].hourly) //3小时天气
+                arr2.push(e.data.HeWeather6[0].lifestyle)//生活指数
                 that.setData({
-                    arr2,arr1,arr0, tmp,location,vis,cond_txt_d,time,
+                    arr2,arr1,arr0, tmp,location,vis,cond_txt,time,
                 })
-                if (e.data.HeWeather6[0].now.cond_txt.indexOf('晴') >= 0) {
+                //背景图
+                if (e.data.HeWeather6[0].now.cond_txt.indexOf('晴') >= 0) {  
                     that.setData({
                       bcgImg: that.data.bcgImgList[0].src,
                     })
@@ -112,7 +112,7 @@ Page({
                 arr1=[]
                 arr2=[]
 
-
+                  //7天折线图
                 var app = getApp()
                 var hour = e.data.HeWeather6[0].hourly
                 var hourly = []
@@ -136,7 +136,7 @@ Page({
                 app.globalData.time24 = time24
                 var weekArray = new Array("周日", "周一", "周二", "周三", "周四", "周五", "周六");
 
-
+                //24小时折现
                     var day = e.data.HeWeather6[0].daily_forecast
                     var daily_forecast = []
                     var timeWeek = [] // 日期
@@ -168,6 +168,7 @@ Page({
                     app.globalData.maxTmpWeek = maxTmpWeek
                     app.globalData.minTmpWeek = minTmpWeek
             },
+            
         })
     },
     commitSearch (res) {  // 点击键盘上的搜索
@@ -176,12 +177,10 @@ Page({
       },
     onLoad(){
         let that =this
-        
         wx.getLocation({
           success(e){
-              // console.log(e)
               let {latitude,longitude} = e
-              if(!that.data.distinct_id){
+              if(!that.data.distinct_id){ //开始直接用所在位置
                 let src=latitude+','+longitude
                 that.search(src)
               }

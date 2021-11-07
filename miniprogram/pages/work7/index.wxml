@@ -14,7 +14,7 @@
           <view class='message' style="position: absolute; right: 0;font-size: 30rpx">{{time}}更新</view>
       </view>
       <view class='temp num' decode='true'>{{tmp}}<text style='font-size:50rpx;position:relative;top:-20px;'>℃</text></view>
-      <view class='weather'>{{cond_txt_d}}</view>
+      <view class='weather'>{{cond_txt}}</view>
       <view class='pm'>
         <text>能见度 {{vis}}</text>
       </view>
