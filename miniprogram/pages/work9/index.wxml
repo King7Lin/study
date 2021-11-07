@@ -1,8 +1,17 @@
 <!-- 底部汇总   -->
-<view class="balance">余额:{{incometotal-paytotal}}</view>  
-<view class="total">
-    <view class="allpay">收入:{{incometotal}}</view>
-    <view class="allin">支出:{{paytotal}}</view>
+<view class="summary">
+    <view class="balance">余额:
+        <text wx:if="{{incometotal-paytotal<0}}" style="color: red;">{{incometotal-paytotal}}</text>
+        <text wx:else style="color: green;">{{incometotal-paytotal}}</text>
+    </view>  
+    <view class="total">
+        <view class="allin">收入:
+            <text style="color: green;">{{incometotal}}</text>
+        </view>
+        <view class="allpay">支出:
+            <text style="color: red;">{{paytotal}}</text>
+        </view>
+    </view>
 </view>
 <view class="content">
     <!-- tab -->
@@ -15,21 +24,23 @@
         </view>
         <text></text>
     </view>
+    <!-- 增加按钮 -->
+    <button bindtap="add" type="primary">增加</button>
+    <input type="text" wx:if="{{isinput}}" value="{{inputval}}" bindconfirm="confirm"
+     placeholder='{{isincome?"收入":"支出"}}金额'/>  
     <!-- 收入列表 -->
     <view wx:if="{{isincome}}" class="a">
-        <view class='list income' wx:for="{{incomelist}}" wx:key='this'>{{item}}
-            <!-- <view>删除</view> -->
+        <view class='list income' wx:for="{{incomelist}}" wx:key='this' style="color: green;">+{{item}}
+            <text wx:if="{{incometotal}}" class="del" bindtap="del">-</text>
         </view>
-        <text wx:if="{{incometotal}}" class="del" bindtap="del">-</text>
     </view>
     <!-- 支出列表 -->
     <view wx:else class="a">
-        <view class="list pay" wx:for="{{paylist}}" wx:key='this'>{{item}}
+        <view class="list pay" wx:for="{{paylist}}" wx:key='this' style="color: red;">-{{item}}
+            <text wx:if="{{paytotal}}" class="del" bindtap="del">-</text>
         </view>
-        <text wx:if="{{paytotal}}" class="del" bindtap="del">-</text>
+        
     </view>
-    <button bindtap="add" type="primary">增加</button>
-    <input type="text" wx:if="{{isinput}}" value="{{inputval}}" bindconfirm="confirm"
-     placeholder='{{isincome?"收入":"支出"}}金额'/>    
+      
 </view>
 

@@ -30,27 +30,35 @@ Page({
         bcgImgList:[
             {
                 src: 'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work7/qing.jpg',
+                text:'趁阳光正好，趁微风不噪，站在城市的寂静处，让一切喧嚣走远'
               },
               {
                 src: 'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work7/yu.jpg',
+                text:'一个人撑伞的日子也一定要顺顺利利'
               },
               {
                 src: 'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work7/xue.jpg',
+                text:'研究表明 雪花分三种 纯生 原汁麦和勇闯天涯'
               },
               {
                 src: 'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work7/yun.jpg',
+                text:'多云，微微雨，一首小调，一杯热茶，一个枕头'
               },
               {
                 src: 'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work7/wu.jpg',
+                text:'动荡的雾霭，仿佛融雪的春潮，袅袅升入天空，像是香炉里飘出来的烟氤'
               },
               {
                 src: 'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work7/yin.jpg',
+                text:'就算阴天了，只要不下雨，它就是晴天'
               },
               {
                 src: 'cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work7/bg5.jpg',
+                text:'无论是晴天或是阴天。无论是冷或是暖，不管喜欢与否，我们都要经受风霜雨露'
               },
         ],
         bcgImg: '',
+        text:''
     },
     input(e){
         console.log(e)
@@ -82,30 +90,37 @@ Page({
                 if (e.data.HeWeather6[0].now.cond_txt.indexOf('晴') >= 0) {  
                     that.setData({
                       bcgImg: that.data.bcgImgList[0].src,
+                      text:that.data.bcgImgList[0].text,
                     })
                   } else if (e.data.HeWeather6[0].now.cond_txt.indexOf('雨') >= 0) {
                     that.setData({
                       bcgImg: that.data.bcgImgList[1].src,
+                      text:that.data.bcgImgList[1].text,
                     })
                   } else if (e.data.HeWeather6[0].now.cond_txt.indexOf('雪') >= 0) {
                     that.setData({
                       bcgImg: that.data.bcgImgList[2].src,
+                      text:that.data.bcgImgList[2].text,
                     })
                   } else if (e.data.HeWeather6[0].now.cond_txt.indexOf('云') >= 0) {
                     that.setData({
                       bcgImg: that.data.bcgImgList[3].src,
+                      text:that.data.bcgImgList[3].text,
                     })
                   } else if (e.data.HeWeather6[0].now.cond_txt.indexOf('雾') >= 0) {
                     that.setData({
                       bcgImg: that.data.bcgImgList[4].src,
+                      text:that.data.bcgImgList[4].text,
                     })
                   } else if (e.data.HeWeather6[0].now.cond_txt.indexOf('阴') >= 0) {
                     that.setData({
                       bcgImg: that.data.bcgImgList[5].src,
+                      text:that.data.bcgImgList[5].text,
                     })
                   } else {
                     that.setData({
                       bcgImg: that.data.bcgImgList[6].src,
+                      text:that.data.bcgImgList[6].text,
                     })
                   }
                 arr0=[]

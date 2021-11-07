@@ -16,14 +16,10 @@
 .selected{
   background-color: red;
 }
-.a{
-  display: flex;
-  flex-direction: row;
-}
 .list{
-  flex: 9;
+  flex-direction: column;
+  /* width: 90%; */
   border: 1px solid black;
-  /* height: 10rpx; */
   font-size: 50rpx;
   margin: 10rpx 0;
   border-radius: 30rpx;
@@ -35,32 +31,38 @@
 .pay{
   background-color: #963;
 } */
-.total{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  text-align: center;
-  font-size: 50rpx;
-}
+
 .balance{
   width: 100%;
   text-align: center;
   font-size: 50rpx;
 }
 .del{
-  flex: 1;
+ float: left;
   height: 100%;
-  width: 8%;
+  width: 6%;
   margin: 10rpx 0;
   border-radius: 50rpx 50rpx 50rpx 50rpx;
-  font-size: 50rpx;
+  font-size: 30rpx;
   color: #fff;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   background-color: red;
+}
+.summary{
+  background-color: burlywood;
+}
+.total{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+  font-size: 50rpx;
+  /* background-color: bisque; */
 }
 .allpay{
   flex: 1;
 }
 .allin{
   flex: 1;
+  border-right: 1px solid #000;
 }

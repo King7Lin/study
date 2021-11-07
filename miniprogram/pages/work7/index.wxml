@@ -1,5 +1,5 @@
 <view class="content">
-    <view class='bcg' wx:if='{{!bcgImg}}' style='background: {{bcgColor}}'></view>
+    <!-- <view class='bcg' wx:if='{{!bcgImg}}' style='background: {{bcgColor}}'></view> -->
     <image wx:if='{{!bcgImg}}' src="cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work7/bg5.jpg" class="bcg" mode="aspectFill"></image>
     <image wx:if='{{bcgImg}}' src="{{bcgImg}}" class="bcg" mode="aspectFill"></image>
     <view class='search' style='background:rgba(255, 255, 255, 0)'>
@@ -18,6 +18,10 @@
       <view class='pm'>
         <text>能见度 {{vis}}</text>
       </view>
+      <!-- 字 -->
+      <view class="text">
+        <text wx:if='{{text}}'>{{text}}</text>
+      </view>
   </view>
     <view class='guide' wx:if="{{arr0}}">
       <view class='title' style="font-weight: bold;">7 天预报</view>
@@ -29,7 +33,7 @@
           <view class='wind i'>{{arr.wind_dir}}{{arr.wind_sc}}级</view>
         </view>
       </view>
-      <button class="tmpButton" bindtap="to7tmpChart" style="width: 100%; margin-bottom: 20rpx;">未来7天温度趋势图</button>
+      <!-- <button class="tmpButton" bindtap="to7tmpChart" style="width: 100%; margin-bottom: 20rpx;">未来7天温度趋势图</button> -->
     </view>
 
     <view class='guide' wx:if="{{arr1}}">
@@ -86,7 +90,7 @@
             <text style="margin-left:35%;">{{arr1.time}}</text>
           </view>
       </view>
-      <button class="tmpButton" bindtap="to24tmpChart" style="width: 100%; margin-bottom: 20rpx;">未来24小时温度趋势图</button>
+      <!-- <button class="tmpButton" bindtap="to24tmpChart" style="width: 100%; margin-bottom: 20rpx;">未来24小时温度趋势图</button> -->
     </view>
       <!-- 生活指数 -->
       <view class='guide' wx:if="{{arr2}}" >
