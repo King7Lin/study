@@ -33,7 +33,7 @@
           <view class='wind i'>{{arr.wind_dir}}{{arr.wind_sc}}级</view>
         </view>
       </view>
-      <!-- <button class="tmpButton" bindtap="to7tmpChart" style="width: 100%; margin-bottom: 20rpx;">未来7天温度趋势图</button> -->
+      <button class="tmpButton" bindtap="to7tmpChart" style="width: 100%; margin-bottom: 20rpx;">未来7天温度趋势图</button>
     </view>
 
     <view class='guide' wx:if="{{arr1}}">
@@ -90,7 +90,7 @@
             <text style="margin-left:35%;">{{arr1.time}}</text>
           </view>
       </view>
-      <!-- <button class="tmpButton" bindtap="to24tmpChart" style="width: 100%; margin-bottom: 20rpx;">未来24小时温度趋势图</button> -->
+      <button class="tmpButton" bindtap="to24tmpChart" style="width: 100%; margin-bottom: 20rpx;">未来24小时温度趋势图</button>
     </view>
       <!-- 生活指数 -->
       <view class='guide' wx:if="{{arr2}}" >
