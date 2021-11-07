@@ -58,9 +58,12 @@ Page({
             distinct_id:e.detail.value
         })
     },
-    search(){
+    search(src){
         let distinct_id=this.data.distinct_id
         let url =`${baseurl}${distinct_id}`
+        if(!distinct_id){
+           url =`${baseurl}${src}`
+        }
         let that=this
         wx.request({
             url,
@@ -105,6 +108,10 @@ Page({
                       bcgImg: that.data.bcgImgList[6].src,
                     })
                   }
+                arr0=[]
+                arr1=[]
+                arr2=[]
+
 
                 var app = getApp()
                 var hour = e.data.HeWeather6[0].hourly
@@ -169,13 +176,19 @@ Page({
       },
     onLoad(){
         let that =this
+        
         wx.getLocation({
           success(e){
               // console.log(e)
               let {latitude,longitude} = e
+              if(!that.data.distinct_id){
+                let src=latitude+','+longitude
+                that.search(src)
+              }
               that.setData({
                 latitude,longitude
               })
+              
           }
         })
         
