@@ -39,7 +39,6 @@
         <view class="list pay" wx:for="{{paylist}}" wx:key='this' style="color: red;">-{{item}}
             <text wx:if="{{paytotal}}" class="del" bindtap="del">-</text>
         </view>
-        
     </view>
       
 </view>

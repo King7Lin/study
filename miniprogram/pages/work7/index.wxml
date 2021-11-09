@@ -6,6 +6,7 @@
       <view class='wrapper'>
         <image src='images/search.png'></image>
         <input bindinput="input" placeholder-class='placeholderClass' confirm-type='search' bindconfirm='commitSearch' placeholder='请输入城市名，快速查询天气信息' maxlength='20'></input>
+        <text class="he">和风天气</text>
       </view>
     </view>
   <view class='info' wx:if="{{arr0}}">
@@ -23,6 +24,7 @@
         <text wx:if='{{text}}'>{{text}}</text>
       </view>
   </view>
+  
     <view class='guide' wx:if="{{arr0}}">
       <view class='title' style="font-weight: bold;">7 天预报</view>
       <view class='guides'>
@@ -38,7 +40,7 @@
 
     <view class='guide' wx:if="{{arr1}}">
       <view class='title' style="font-weight: bold;">24小时每3小时天气</view>
-      <view class="row1" bindchange="bindchange">
+      <view class="row1">
         <view class='details'  wx:for='{{arr1[0]}}' wx:for-item="arr1">
           <view class="row2">
             <view class='detail'>

@@ -2,6 +2,7 @@ import * as echarts from '../ec-canvas/echarts';
 
 let app = getApp();
 const baseurl='https://free-api.heweather.net/s6/weather?key=b98d5bd54c4d417bb169b189b24f4bb8&days=7&location='
+var now=[]
 var arr0=[]
 var arr1=[]
 var arr2=[]
@@ -80,11 +81,12 @@ Page({
                 let time=e.data.HeWeather6[0].update.loc         //更新时间   
                 let {tmp,vis,cond_txt}=e.data.HeWeather6[0].now  
                 let location=e.data.HeWeather6[0].basic.location //地点
+                now.push(e.data.HeWeather6[0].now)
                 arr0.push(e.data.HeWeather6[0].daily_forecast) //7天预报
                 arr1.push(e.data.HeWeather6[0].hourly) //3小时天气
                 arr2.push(e.data.HeWeather6[0].lifestyle)//生活指数
                 that.setData({
-                    arr2,arr1,arr0, tmp,location,vis,cond_txt,time,
+                    arr2,arr1,arr0, tmp,location,vis,cond_txt,time,now
                 })
                 //背景图
                 if (e.data.HeWeather6[0].now.cond_txt.indexOf('晴') >= 0) {  
@@ -126,7 +128,7 @@ Page({
                 arr0=[]
                 arr1=[]
                 arr2=[]
-
+                now=[]
                   //7天折线图
                 var app = getApp()
                 var hour = e.data.HeWeather6[0].hourly
