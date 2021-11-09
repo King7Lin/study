@@ -1,6 +1,6 @@
 <view class="content">
     <!-- <view class='bcg' wx:if='{{!bcgImg}}' style='background: {{bcgColor}}'></view> -->
-    <image wx:if='{{!bcgImg}}' src="cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work7/bg5.jpg" class="bcg" mode="aspectFill"></image>
+    <!-- <image wx:if='{{!bcgImg}}' src="cloud://lin-0gd1s4ir5c7fcba1.6c69-lin-0gd1s4ir5c7fcba1-1307393114/work7/bg5.jpg" class="bcg" mode="aspectFill"></image> -->
     <image wx:if='{{bcgImg}}' src="{{bcgImg}}" class="bcg" mode="aspectFill"></image>
     <view class='search' style='background:rgba(255, 255, 255, 0)'>
       <view class='wrapper'>

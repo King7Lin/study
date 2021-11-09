@@ -51,10 +51,10 @@ page {
   .placeholderClass {
     color: #fff;
   }
- .content {
+ /* .content {
     flex: 2;
     transition: .3s ease;
-  }
+  } */
   .content {
     position: relative;
     z-index: 2;
@@ -93,34 +93,34 @@ page {
     padding: 10% 50rpx;
     font-size: 66rpx;
   }
-  .city .name {
+  /* .city .name {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .city .name .val {
+  } */
+  /* .city .name .val {
     max-width: 5em;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
-  }
-  .city .name .icon,
+  } */
+  /* .city .name .icon,
   .city .name .down {
     width: 30rpx;
     height: 30rpx;
-  }
-  .city .name .icon {
+  } */
+  /* .city .name .icon {
     margin-right: 20rpx;
-  }
-  .city .name .down {
+  } */
+  /* .city .name .down {
     margin-left: 20rpx;
   }
   .city .time {
     display: block;
     text-align: right;
     font-size: 24rpx;
-  }
+  } */
   .message {
     font-size: 22rpx;
     color: #fff;

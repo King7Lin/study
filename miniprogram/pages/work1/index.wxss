@@ -8,6 +8,7 @@ navigator{
 text{
   position: absolute;
   right: 0;
+  font-size: 30rpx;
 }
 .navigator-hover {
   color:blue;
