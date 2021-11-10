@@ -1,6 +1,6 @@
 <view class="heater">
     <button type="primary" size="mini" bindtap="run">{{running?'暂停记录':'开始记录'}}</button>
-    <button type="primary" size="mini" bindtap="clear">清楚数据</button>
+    <button type="primary" size="mini" bindtap="clear">清除数据</button>
     <button type="primary" size="mini" bindtap="save">保存</button>
     <button type="primary" size="mini" bindtap="playback">回放</button>
     <button type="primary" size="mini" bindtap="getLocation">测试</button>

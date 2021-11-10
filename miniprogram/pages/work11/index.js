@@ -30,7 +30,7 @@ Page({
     },
     onLoad(){
         this.getLocation()
-        // setInterval(this.record,this.data.interval)
+        setInterval(this.record,this.data.interval)
     },
     record(){
         if(!this.data.running){
@@ -77,5 +77,14 @@ Page({
         this.setData({
             running:!this.data.running
         })
+    },
+    playback(){
+        
+    },
+    save(){
+
+    },
+    clear(){
+
     }
 })
