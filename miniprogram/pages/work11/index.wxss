@@ -1,0 +1,11 @@
+.heater{
+    display: flex;
+
+}
+.counter{
+    text-align: center;
+}
+.map{
+    width: 100%;
+    height: 90vh;
+}

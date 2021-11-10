@@ -17,7 +17,8 @@
         "pages/work8/leader/leader",
         "pages/work8/scenery/scenery",
         "pages/work7/index",
-        "pages/work9/index"
+        "pages/work9/index",
+        "pages/work11/index"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
