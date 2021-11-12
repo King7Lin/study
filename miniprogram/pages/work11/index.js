@@ -1,7 +1,7 @@
 const utils= require('./utils.js')
 Page({
     data:{
-        running:true,
+        running:false,
         latitude:0,
         longitude:0,
         seconds:0,
@@ -57,7 +57,7 @@ Page({
                 console.log(newMarker)
                 pace =utils.getDistance(lastmarker.latitude,lastmarker.longitude,newMarker.latitude,newMarker.longitude)
                 console.log(pace)
-                if(pace>15){
+                if(pace>3){
                     tmarkers.push(newMarker)
                 }else{
                     pace=0

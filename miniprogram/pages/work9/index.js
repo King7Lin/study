@@ -7,6 +7,13 @@ Page({
       incometotal:0,
       paytotal:0,
       inputval:'',
+      date: '2021-10-01',
+  },
+  bindDateChange: function(e) {
+    console.log( e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
   },
   add(){
       this.setData({

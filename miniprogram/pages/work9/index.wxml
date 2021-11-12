@@ -40,6 +40,12 @@
             <text wx:if="{{paytotal}}" class="del" bindtap="del">-</text>
         </view>
     </view>
-      
+</view>
+<view class="section">
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="20999-09-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
 </view>
 

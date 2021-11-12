@@ -1,0 +1,12 @@
+.intro{
+    font-size: 30rpx;
+    color: blue;
+    margin: 20rpx;
+}
+.menu{
+    display: flex;
+}
+.canvas{
+    width: 100%;
+    height: 40vh;
+}
