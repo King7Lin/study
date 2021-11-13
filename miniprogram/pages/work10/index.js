@@ -55,25 +55,5 @@ Page({
         ctx.fillText('07201104陈杰麟',0,200)
         ctx.draw(true)
     },
-    onHide(){
-        consolelog(this.data.imagePath)
-        let img=this.data.imagePath
-       wx.setStorage({
-        data:img,
-        key:'key'
-      })
-    },
-    onLoad(){
-        let that=this
-      wx.getStorage({
-          key:'key',
-          success(e){
-              console.log(e)
-              that.setData({
-                imagePath:e.data
-              })
-          }
-      })
-    }
 
 })
