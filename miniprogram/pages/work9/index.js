@@ -7,12 +7,24 @@ Page({
       incometotal:0,
       paytotal:0,
       inputval:'',
-      date: '2021-10-01',
+      date: '0000-00-00',
+      Ptime:[],
+      Itime:[]
   },
   bindDateChange: function(e) {
-    console.log( e.detail.value)
+    // console.log(e.detail.value)
+    let Ptime=this.data.Ptime
+    let Itime=this.data.Itime
+    if(this.data.isincome){
+         Itime.push(e.detail.value)
+    }else{
+        Ptime.push(e.detail.value)
+    }
+    console.log(Ptime)
     this.setData({
-      date: e.detail.value
+      date: e.detail.value,
+      Ptime:Ptime,
+      Itime:Itime
     })
   },
   add(){
@@ -62,7 +74,7 @@ Page({
           })
       }
   },
-  del(e){
+  del(e){//清除
     console.log(e)
     let that=this
     if(that.data.incomelist.length>=0&&that.data.paylist.length>=0){
@@ -70,6 +82,10 @@ Page({
         let iList=[]
         let pTotal=0
         let pList=[]
+        let Ptime=[]
+        let Itime=[]
+        Ptime=that.data.Ptime
+        Itime=that.data.Itime
         pList=that.data.paylist
         pTotal=that.data.paytotal
         iTotal=that.data.incometotal
@@ -78,35 +94,39 @@ Page({
     if(that.data.isincome){
         iTotal-=that.data.incomelist[iList.length-1]
         iList.splice(iList.length-1,1)
+        Itime.splice(iList.length-1,1)
         that.data.incomelist=iList
         that.data.incometotal=iTotal
         that.setData({
             incomelist:iList,
-            incometotal:iTotal
+            incometotal:iTotal,
+            Itime:Itime
         })
     }else{
         pTotal-=that.data.paylist[pList.length-1]
         pList.splice(pList.length-1,1)
+        Ptime.splice(pList.length-1,1)
         that.data.paylist=pList
         that.data.paytotal=pTotal
         that.setData({
             paylist:pList,
-            paytotal:pTotal
+            paytotal:pTotal,
+            Ptime:Ptime
         })
     }
-    that.onHide(iList,pList,iTotal,pTotal)
+    // that.onHide(iList,pList,iTotal,pTotal,Ptime,Itime)
 }
   },
   onUnload(){
       this.onHide()
   },
-  onHide(iList,pList,iTotal,pTotal){
-    let store =[]
-      if(iList&&pList&&iTotal&&pTotal){
-           store =[iList,pList,iTotal,pTotal]
-      }else{
-         store=[this.data.incomelist,this.data.paylist,this.data.incometotal,this.data.paytotal]
-      }
+  onHide(){
+    []
+    //   if(iList&&pList&&iTotal&&pTotal&&Ptime&&Itime){
+        //    store =[iList,pList,iTotal,pTotal,Ptime,Itime]
+    //   }else{
+        let store = [this.data.incomelist,this.data.paylist,this.data.incometotal,this.data.paytotal,this.data.Ptime,this.data.Itime]
+    //   }
       
       wx.setStorage({
           data:store,
@@ -123,7 +143,9 @@ Page({
                   incomelist:e.data[0],
                   paylist:e.data[1],
                   incometotal:e.data[2],
-                  paytotal:e.data[3]
+                  paytotal:e.data[3],
+                  Ptime:e.data[4],
+                  Itime:e.data[5],
               })
           }
       })

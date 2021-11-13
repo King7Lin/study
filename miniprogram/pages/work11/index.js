@@ -1,4 +1,6 @@
 const utils= require('./utils.js')
+let fmarkers=[]
+let timer=0
 Page({
     data:{
         running:false,
@@ -7,14 +9,20 @@ Page({
         seconds:0,
         meters:0,
         markers:[],
+        polyline:[{
+            points:[],
+            color:'#ff0000FF',
+            width:2
+        }],
         interval:1000,
+        feedbackrate:500
     },
-    test(){
-        let dis=utils.getDistance(23.383101,113.449479,23.38703,113.446121)
-        this.setData({
-            meter:dis
-        })
-    },
+    // test(){
+    //     let dis=utils.getDistance(23.383101,113.449479,23.38703,113.446121)
+    //     this.setData({
+    //         meter:dis
+    //     })
+    // },
     getLocation(){
         wx.getLocation({
             type:'gcj02'
@@ -79,12 +87,53 @@ Page({
         })
     },
     playback(){
-        
+        this.clear()
+        wx.getStorage({
+            key:'running',
+        }).then(res=>{
+            fmarkers=res.data
+        })
+        timer=setInterval(this.feedback,this.data.feedbackrate)
+    },
+    feedback(){
+        let lmarkers = this.data.markers
+        let lpolyline = this.data.polyline
+        if(fmarkers.length>0){
+            lmarkers.push(fmarkers.shift())
+            lpolyline[0].points=lmarkers
+        }else{
+            clearInterval(timer)
+        }
+        this.setData({
+            markers:lmarkers,
+            polyline:lpolyline
+        })
     },
     save(){
-
+        wx.setStorage({
+            data:this.data.markers,
+            key:'running',
+        }).then(()=>{
+            wx.showToast({
+              title: '保存成功',
+            })
+        })
     },
     clear(){
+        this.setData({
+            markers:[],
+            meters:0,
+            seconds:0,
+            running:false,
+            polyline: [{
+                points:[],
+                color: '#ff0000DD',
+                width:2
+              }],
+              interval: 1000,
+        })
+    },
+    onHide(){
 
     }
 })

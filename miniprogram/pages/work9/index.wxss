@@ -25,12 +25,15 @@
   border-radius: 30rpx;
   box-shadow: 1px 1px 1px #000;
 }
-/* .income{
-  background-color: #369;
+.list1{
+  flex-direction: column;
+  /* width: 90%; */
+  /* border: 1px solid black; */
+  font-size: 40rpx;
+  margin: 10rpx 0;
+  border-radius: 30rpx;
+  /* box-shadow: 1px 1px 1px #000; */
 }
-.pay{
-  background-color: #963;
-} */
 
 .balance{
   width: 100%;
@@ -38,16 +41,17 @@
   font-size: 50rpx;
 }
 .del{
- float: left;
-  height: 100%;
-  width: 6%;
-  margin: 10rpx 0;
-  border-radius: 50rpx 50rpx 50rpx 50rpx;
-  font-size: 30rpx;
-  color: #fff;
-  /* border: 1px solid #000; */
-  background-color: red;
-}
+  float: left;
+   height: 100%;
+   width: 6%;
+   margin: 10rpx 0;
+   border-radius: 50rpx 50rpx 50rpx 50rpx;
+   font-size: 30rpx;
+   color: #fff;
+   /* border: 1px solid #000; */
+   background-color: red;
+ }
+ 
 .summary{
   background-color: burlywood;
 }
