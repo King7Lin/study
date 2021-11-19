@@ -56,8 +56,8 @@
   background-color: burlywood;
 }
 .total{
-  display: flex;
-  flex-direction: row;
+  /* display: flex; */
+  /* flex-direction: row; */
   width: 100%;
   text-align: center;
   font-size: 50rpx;

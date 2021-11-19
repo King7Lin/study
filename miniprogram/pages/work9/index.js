@@ -7,25 +7,15 @@ Page({
       incometotal:0,
       paytotal:0,
       inputval:'',
-      date: '0000-00-00',
-      Ptime:[],
-      Itime:[]
+      date: '2016-01-01',
+      outputArr:[],
+      tempArr:[]
   },
   bindDateChange: function(e) {
     // console.log(e.detail.value)
-    let Ptime=this.data.Ptime
-    let Itime=this.data.Itime
-    if(this.data.isincome){
-         Itime.push(e.detail.value)
-    }else{
-        Ptime.push(e.detail.value)
-    }
-    console.log(Ptime)
     this.setData({
-      date: e.detail.value,
-      Ptime:Ptime,
-      Itime:Itime
-    })
+        date: e.detail.value
+      })
   },
   add(){
       this.setData({
@@ -44,13 +34,29 @@ Page({
           })
       }
   },
-  
+  toarr(arr){
+    let arr2=[]
+    for(var key in arr)
+    {  
+        arr2.push([key,arr[key][0],arr[key][1]])
+    }
+    return arr2
+    },
   confirm(e){
       console.log(typeof incomelist)
+      let date=this.data.date
       let je =Number(e.detail.value)
       let incomelist=this.data.incomelist
       let paylist=this.data.paylist
+      let outputArr=this.data.outputArr
+      let tempArr=this.data.tempArr
       if(this.data.isincome){
+        if(typeof outputArr[date]=='undefined'){
+            outputArr[date]=[je,0]
+        }else{
+            outputArr[date][0]+=je
+        }
+        tempArr=this.toarr(outputArr)
           incomelist.push(je)
           let incometotal=incomelist.reduce((sum,v)=>{
               return sum+=v
@@ -59,10 +65,18 @@ Page({
               incomelist,
               inputval:'',
               isinput:false,
-              incometotal
+              incometotal,
+              outputArr,
+              tempArr
           })
       }else{
           paylist.push(je)
+          if(typeof outputArr[date]=='undefined'){
+             outputArr[date]=[0,je]
+            }else{
+             outputArr[date][1]+=je
+            }
+        tempArr=this.toarr(outputArr)
           let paytotal =paylist.reduce((sum,v)=>{
               return sum+=v
           },0)
@@ -71,9 +85,14 @@ Page({
               inputval:'',
               isinput:false,
               paytotal,
+              outputArr,
+              tempArr
           })
       }
   },
+     onUnload(){
+     this.onHide()
+    },
   del(e){//清除
     console.log(e)
     let that=this
@@ -84,8 +103,6 @@ Page({
         let pList=[]
         let Ptime=[]
         let Itime=[]
-        Ptime=that.data.Ptime
-        Itime=that.data.Itime
         pList=that.data.paylist
         pTotal=that.data.paytotal
         iTotal=that.data.incometotal
@@ -94,27 +111,26 @@ Page({
     if(that.data.isincome){
         iTotal-=that.data.incomelist[iList.length-1]
         iList.splice(iList.length-1,1)
-        Itime.splice(iList.length-1,1)
+        // Itime.splice(iList.length-1,1)
         that.data.incomelist=iList
         that.data.incometotal=iTotal
         that.setData({
             incomelist:iList,
             incometotal:iTotal,
-            Itime:Itime
+            // Itime:Itime
         })
     }else{
         pTotal-=that.data.paylist[pList.length-1]
         pList.splice(pList.length-1,1)
-        Ptime.splice(pList.length-1,1)
+        // Ptime.splice(pList.length-1,1)
         that.data.paylist=pList
         that.data.paytotal=pTotal
         that.setData({
             paylist:pList,
             paytotal:pTotal,
-            Ptime:Ptime
+            // Ptime:Ptime
         })
     }
-    // that.onHide(iList,pList,iTotal,pTotal,Ptime,Itime)
 }
   },
   onUnload(){
@@ -122,11 +138,7 @@ Page({
   },
   onHide(){
     []
-    //   if(iList&&pList&&iTotal&&pTotal&&Ptime&&Itime){
-        //    store =[iList,pList,iTotal,pTotal,Ptime,Itime]
-    //   }else{
-        let store = [this.data.incomelist,this.data.paylist,this.data.incometotal,this.data.paytotal,this.data.Ptime,this.data.Itime]
-    //   }
+        let store = [this.data.incomelist,this.data.paylist,this.data.incometotal,this.data.paytotal,this.data.outputArr,this.data.tempArr]
       
       wx.setStorage({
           data:store,
@@ -144,8 +156,8 @@ Page({
                   paylist:e.data[1],
                   incometotal:e.data[2],
                   paytotal:e.data[3],
-                  Ptime:e.data[4],
-                  Itime:e.data[5],
+                  outputArr:e.data[4],
+                  tempArr:e.data[5]
               })
           }
       })

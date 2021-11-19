@@ -17,12 +17,6 @@ Page({
         interval:1000,
         feedbackrate:500
     },
-    // test(){
-    //     let dis=utils.getDistance(23.383101,113.449479,23.38703,113.446121)
-    //     this.setData({
-    //         meter:dis
-    //     })
-    // },
     getLocation(){
         wx.getLocation({
             type:'gcj02'
@@ -121,19 +115,17 @@ Page({
     },
     clear(){
         this.setData({
-            markers:[],
-            meters:0,
-            seconds:0,
-            running:false,
-            polyline: [{
-                points:[],
-                color: '#ff0000DD',
-                width:2
-              }],
-              interval: 1000,
+        running:false,
+        latitude:0,
+        longitude:0,
+        seconds:0,
+        meters:0,
+        markers:[],
+        polyline:[{
+            points:[],
+            color:'#ff0000FF',
+            width:2
+        }],
         })
     },
-    onHide(){
-
-    }
 })
