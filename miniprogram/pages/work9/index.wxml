@@ -23,7 +23,7 @@
     <button bindtap="add" type="primary">增加</button>
     <input type="text" wx:if="{{isinput}}" value="{{inputval}}" bindconfirm="confirm"
         placeholder='{{isincome?"收入":"支出"}}金额' />
-    <picker wx:if="{{isinput}}" mode="date" value="{{date}}" start="2015-09-01" end="20999-09-01"
+    <picker wx:if="{{isinput}}" mode="date" value="{{date}}" start="2015-09" end="20999-09"
         bindchange="bindDateChange">
         <view class="picker">
             当前选择: {{date}}

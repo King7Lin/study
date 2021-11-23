@@ -12,7 +12,6 @@ Page({
       tempArr:[]
   },
   bindDateChange: function(e) {
-    // console.log(e.detail.value)
     this.setData({
         date: e.detail.value
       })
@@ -44,20 +43,21 @@ Page({
     },
   confirm(e){
       console.log(typeof incomelist)
-      let date=this.data.date
+      let datearr=this.data.date.split('-')
+       let date=datearr[0]+'-'+datearr[1]
       let je =Number(e.detail.value)
       let incomelist=this.data.incomelist
       let paylist=this.data.paylist
       let outputArr=this.data.outputArr
       let tempArr=this.data.tempArr
       if(this.data.isincome){
+        incomelist.push(je)
         if(typeof outputArr[date]=='undefined'){
             outputArr[date]=[je,0]
         }else{
             outputArr[date][0]+=je
         }
         tempArr=this.toarr(outputArr)
-          incomelist.push(je)
           let incometotal=incomelist.reduce((sum,v)=>{
               return sum+=v
           },0)
@@ -90,9 +90,9 @@ Page({
           })
       }
   },
-     onUnload(){
-     this.onHide()
-    },
+    //  onUnload(){
+    //  this.onHide()
+    // },
   del(e){//清除
     console.log(e)
     let that=this
