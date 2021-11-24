@@ -1,68 +1,74 @@
 {
-    "setting": {},
-    "condition": {
-        "plugin": {
-            "list": []
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
         },
-        "game": {
-            "list": []
+        {
+          "id": -1,
+          "name": "pages/work4/index",
+          "pathName": "pages/work4/index",
+          "query": "",
+          "scene": null
         },
-        "gamePlugin": {
-            "list": []
+        {
+          "id": -1,
+          "name": "pages/test/test",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
         },
-        "miniprogram": {
-            "list": [
-                {
-                    "id": -1,
-                    "name": "db guide",
-                    "pathName": "pages/databaseGuide/databaseGuide",
-                    "query": ""
-                },
-                {
-                    "id": -1,
-                    "name": "pages/work4/index",
-                    "pathName": "pages/work4/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "id": -1,
-                    "name": "pages/test/test",
-                    "pathName": "pages/test/test",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/work7/index",
-                    "pathName": "pages/work7/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/work1/index",
-                    "pathName": "pages/work1/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/work9/index",
-                    "pathName": "pages/work9/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/work11/index",
-                    "pathName": "pages/work11/index",
-                    "query": "",
-                    "scene": null
-                },
-                {
-                    "name": "pages/work10/index",
-                    "pathName": "pages/work10/index",
-                    "query": "",
-                    "scene": null
-                }
-            ]
+        {
+          "name": "pages/work7/index",
+          "pathName": "pages/work7/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/work1/index",
+          "pathName": "pages/work1/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/work9/index",
+          "pathName": "pages/work9/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/work11/index",
+          "pathName": "pages/work11/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/work10/index",
+          "pathName": "pages/work10/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/work12/index",
+          "pathName": "pages/work12/index",
+          "query": "",
+          "scene": null
         }
+      ]
     }
+  }
 }

@@ -1,0 +1,23 @@
+const url = 'http://127.0.0.1:8080/sampledata'
+Page({
+  onLoad(){
+    wx.request({
+      url,
+      success:(res)=>{
+        console.log(res)
+        this.setData(res.data)
+      }
+    })
+  },
+  submit(e){
+    console.log(e);
+    wx.request({
+      url,
+      method:'post',
+      data:e.detail.value,
+      success:(res)=>{
+        this.setData(res.data)
+      }
+    })
+  }
+})
