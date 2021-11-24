@@ -18,8 +18,7 @@ Page({
   click(e){
     console.log(e)
     let index = e.currentTarget.dataset.id
-    console.log(index)
-    audioCtx.src = musiclist[index].src
+    audioCtx.src = this.data.musiclist[index].src
     audioCtx.play()
   }
 })
