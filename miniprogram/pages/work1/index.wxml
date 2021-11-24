@@ -12,4 +12,5 @@
 <navigator class="work10" url="/pages/work10/index">work10  马赛克<text>-></text></navigator>
 <navigator class="work11" url="/pages/work11/index">work11 阳光晨跑<text>-></text></navigator>
 <navigator class="work12" url="/pages/work12/index">work12  教学满意度调查<text>-></text></navigator>
+<navigator class="work13" url="/pages/work13/index">work13 听歌<text>-></text></navigator>
 <navigator class="exitbtn" open-type="exit" target="miniProgram">退出</navigator>

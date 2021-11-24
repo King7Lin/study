@@ -1,0 +1,3 @@
+<view wx:for="{{musiclist}}" wx:key='this'>
+  <image src="{{item.coverImg}}" bindtap="click" data-id="{{index}}" style="height: 200rpx; width: 200rpx;" />
+</view>

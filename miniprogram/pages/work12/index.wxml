@@ -32,7 +32,6 @@
       <textarea name="opinion" cols="30" rows="5" value="{{opinion}}"></textarea>
     </view>
     <button form-type="submit" type="primary">提交</button>
-  </form>  
-  
+  </form>
   <view>总人数：{{count}}</view>
 </view>
