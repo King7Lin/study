@@ -17,11 +17,26 @@ Page({
     }
   },
   onLoad(){
+    
     ml.get().then(res=>{
       console.log(res)
+      let Hmusic=[].concat(res.data)
+      let hotMusic=[]
+      for(let i=0;i<10;i++){
+        let num = Math.round(Math.random()*(9-i))
+        // console.log(num)
+        if(Hmusic[num]){
+          // console.log(num)
+          hotMusic.push(Hmusic[num])
+          Hmusic.splice(num,1)
+      }
+    }
+    // console.log(hotMusic)
       this.setData({
-        musiclist:res.data
+        musiclist:res.data,
+        hotMusic
       })
+      console.log(res.data)
       this.selectMusic(0)
     })
     audioCtx.onError(()=>{
@@ -63,6 +78,7 @@ Page({
     console.log(index)
     let music = this.data.musiclist[index]
     audioCtx.src = music.src
+    // console.log(music.src)
     this.setData({
       playIndex:index,
       play:music,

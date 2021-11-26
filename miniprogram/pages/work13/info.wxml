@@ -30,13 +30,13 @@
   </view>
   <!-- 热门音乐 -->
   <view class="content-info-list">
-    <view class="list-title">热门歌曲</view>
-    <view class="list-inner">
-      <view class="list-item">
-        <image src="images/cover.jpg"></image>
-        <view>歌曲1</view>
+    <view class="list-title" >热门歌曲</view>
+    <view class="list-inner" >
+      <view class="list-item" wx:for="{{hotMusic}}" wx:key="this">
+        <image src="{{item.coverImg}}"></image>
+        <view>{{item.title}}</view>
       </view>
-      <view class="list-item">
+      <!-- <view class="list-item">
         <image src="images/cover.jpg"></image>
         <view>歌曲2</view>
       </view>
@@ -67,7 +67,7 @@
       <view class="list-item">
         <image src="images/cover.jpg"></image>
         <view>歌曲9</view>
-      </view>
+      </view> -->
     </view>
   </view>
 </scroll-view>
