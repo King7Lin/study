@@ -236,4 +236,5 @@ page {
   font-size: 10pt;
   margin-right: 20rpx;
   color: #c25b5b;
+  
 }

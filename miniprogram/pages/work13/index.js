@@ -17,13 +17,12 @@ Page({
     }
   },
   onLoad(){
-    
     ml.get().then(res=>{
       console.log(res)
       let Hmusic=[].concat(res.data)
       let hotMusic=[]
-      for(let i=0;i<10;i++){
-        let num = Math.round(Math.random()*(9-i))
+      for(let i=0;i<9;i++){
+        let num = Math.round(Math.random()*(11-i))
         // console.log(num)
         if(Hmusic[num]){
           // console.log(num)
@@ -117,5 +116,9 @@ Page({
     this.setData({
       item:e.currentTarget.dataset.page
     })
-  }
+  },
+  hanleSliderChange(e) {
+    console.log(e)
+    audioCtx.seek(e.detail.value / 100 * this.data.play.duration);
+  },
 })

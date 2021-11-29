@@ -1,4 +1,4 @@
-<scroll-view class="content-plaulist" scroll-y="true">
+<scroll-view class="content-playlist" scroll-y='true'>
   <view class="playlist-item" wx:for="{{musiclist}}" wx:key='this' bindtap="change" data-index="{{index}}">
     <image class="playlist-cover" src="{{item.coverImg}}"></image>
     <view class="playlist-info">

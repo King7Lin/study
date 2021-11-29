@@ -1,16 +1,23 @@
 <!--miniprogram/pages/work1/index.wxml-->
-<view class="sn" style="margin: auto; font-weight: bold;" >07201104陈杰麟</view>
-<navigator class="work2" url="/pages/work2/index">work2 惊喜不惊喜 <text>-></text></navigator>
-<navigator class="work3" url="/pages/work3/index">work3 比大小<text>-></text></navigator>
-<navigator class="work4" url="/pages/work4/index">work4 尤克里里<text>-></text></navigator>
-<navigator class="work4" url="/pages/work4 copy/index">work4 尤克里里 copy <text>-></text></navigator>
-<navigator class="work5" url="/pages/work5/index">work5 计算器<text>-></text></navigator>
-<navigator class="work6" open-type="switchTab" url="/pages/work6/property">work6 诉讼费<text>-></text></navigator>
-<navigator class="work7" url="/pages/work7/index">work7 天气预报<text>-></text></navigator>
-<navigator class="work8" url="/pages/work8/Index/index">work8 机电微官网<text>-></text></navigator>
-<navigator class="work9" url="/pages/work9/index">work9 记账<text>-></text></navigator>
-<navigator class="work10" url="/pages/work10/index">work10  马赛克<text>-></text></navigator>
-<navigator class="work11" url="/pages/work11/index">work11 阳光晨跑<text>-></text></navigator>
-<navigator class="work12" url="/pages/work12/index">work12  教学满意度调查<text>-></text></navigator>
-<navigator class="work13" url="/pages/work13/index">work13 听歌<text>-></text></navigator>
+<image src="{{img}}" class="bcg" mode="aspectFill"></image> 
+<view class="name" >07201104陈杰麟</view>
+<view class="Ctext text0">
+  <text>{{write}}</text>
+</view>
+<view class="Etext text0">
+  <text>{{english}}</text>
+</view>
+<navigator class="work2" url="/pages/work2/index">work2<text class="text">惊喜不惊喜</text></navigator>
+<navigator class="work3" url="/pages/work3/index">work3<text class="text">比大小</text></navigator>
+<navigator class="work4" url="/pages/work4/index">work4<text class="text"> 尤克里里</text></navigator>
+<navigator class="work4" url="/pages/work4 copy/index">work4<text class="text">尤克里里 copy</text></navigator>
+<navigator class="work5" url="/pages/work5/index">work5<text class="text">计算器</text></navigator>
+<navigator class="work6" open-type="switchTab" url="/pages/work6/property">work6 <text class="text">诉讼费</text></navigator>
+<navigator class="work7" url="/pages/work7/index">work7 <text class="text">天气预报</text></navigator>
+<navigator class="work8" url="/pages/work8/Index/index">work8 <text class="text">机电微官网</text></navigator>
+<navigator class="work9" url="/pages/work9/index">work9 <text class="text">记账</text></navigator>
+<navigator class="work10" url="/pages/work10/index">work10  <text class="text">马赛克</text></navigator>
+<navigator class="work11" url="/pages/work11/index">work11 <text class="text">阳光晨跑</text></navigator>
+<navigator class="work12" url="/pages/work12/index">work12  <text class="text">教学满意度调查</text></navigator>
+<navigator class="work13" url="/pages/work13/index">work13 <text class="text">听歌</text></navigator>
 <navigator class="exitbtn" open-type="exit" target="miniProgram">退出</navigator>

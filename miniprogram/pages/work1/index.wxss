@@ -1,13 +1,24 @@
 navigator{
-  margin: 5rpx;
+  margin: 10rpx 0rpx;
   padding: 10px;
-  background-color: rgb(204, 207, 207);
-  border-top: 1px solid rgb(180, 177, 177);
-  border-bottom: 1px solid rgb(180, 177, 177);
+  background-color: rgba(0,0,0,.6);
+  border: 1px solid rgb(180, 177, 177);
+  box-shadow: 5rpx 5rpx 3rpx #888888;
+  border-radius: 30rpx;
+  color: #fff;
 }
-text{
+.name{
+  font-size: 35rpx ;
+  margin: auto; 
+  font-weight: bold;
+  text-shadow: 1px 0 0 #8B4513, 0 1px 0 #8B4513, 
+    0 -1px 0 #8B4513, -1px 0 0 #8B4513, 
+    1px 0 1px #8B4513, 0 1px 1px #8B4513, 
+    0 -1px 1px #8B4513, -1px 0 1px #8B4513;
+}
+.text{
   position: absolute;
-  right: 0;
+  left: 30%;
   font-size: 30rpx;
 }
 .navigator-hover {
@@ -21,5 +32,36 @@ text{
   margin: auto;
   padding: 10rpx 80rpx;
   background-color: rgb(12, 11, 11);
+  color: #fff;
+}
+.bcg {
+  position: fixed;
+  z-index: -1;
+  height: 100vh;
+  width: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.text0{
+  margin: 20rpx;
+  text-align: center;
+  justify-content: center;
+}
+.Ctext{
+  font-size: 33rpx;
+  font-weight: bold;
+    background: linear-gradient(to right, #1ae8c8, #4a8aff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.Etext{
+  padding: 4px;
+  background-color: rgba(0,0,.5,.2);
+  border: 1px solid rgb(180, 177, 177);
+  /* box-shadow: 5rpx 5rpx 3rpx #888888; */
+  border-radius: 30rpx;
   color: #fff;
 }
