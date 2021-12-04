@@ -73,6 +73,12 @@
           "pathName": "pages/work13/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/work14/index",
+          "pathName": "pages/work14/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

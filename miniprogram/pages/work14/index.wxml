@@ -4,9 +4,9 @@
     <view class="movies">
       <view class="movie" wx:for="{{movie}}" wx:key="this">
         <navigator url="detail?type=movie&id={{item.id}}">
-          <image src="{{item.cover.url}}" class="cover"></image>
-          <view>{{item.title}}</view>
-          <mystar value="{{item.rating.value}}" ></mystar>
+          <image src="{{item.coverr.url}}" class="cover"></image>
+          <view>{{item.titlee}}</view>
+          <mystar value="{{item.ratingg.value}}" ></mystar>
         </navigator>
       </view>
     </view>

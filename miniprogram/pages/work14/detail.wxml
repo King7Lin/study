@@ -1,11 +1,11 @@
 <view class="content">
-  <text style="font-size: 60px;" >{{xq.title}}</text>
+  <text style="font-size: 60px;" >{{xq.ttitl}}</text>
   <view class="xq">
     <image src="{{xq.cover_url}}" class="xqimg"></image>
     <view class="details">
       <mystar value='{{xq.rating.value}}'></mystar>
       <text>
-        {{xq.rating.count}}人评价
+        {{xq.rratin.count}}人评价
         {{xq.durations}} {{mygenres}}
         {{xq.pubdate}}
         {{xq.directors[0].name}}导演 {{myactors}}
@@ -14,7 +14,7 @@
   </view>
   <text style="font-size: 35rpx; font-weight: bold;">标签</text>
   <view class="bq">
-    <view class="bqItem" wx:for="{{bq.tags}}" wx:key="this">
+    <view class="bqItem" wx:for="{{bq.ttag}}" wx:key="this">
       {{item}}
     </view>
   </view>
