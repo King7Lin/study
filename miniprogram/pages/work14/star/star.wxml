@@ -1,0 +1,7 @@
+<view class="stars">
+  <image class="star" wx:for="{{f}}" wx:key="this" src="fullstar.png"  />
+  <image class="star" wx:for="{{h}}" wx:key="this" src="halfstar.png"  />
+  <image class="star" wx:for="{{e}}" wx:key="this" src="emptystar.png" />
+  <text wx:if="{{displayNum}}">{{value}}</text>
+</view>
+

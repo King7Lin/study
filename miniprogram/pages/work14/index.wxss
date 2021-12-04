@@ -1,0 +1,15 @@
+.movies{
+  display: flex;
+
+}
+.movie{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cover{
+  width: 300rpx;
+  height: 400rpx;
+  border-radius: 30rpx;
+  margin: 30rpx;
+}

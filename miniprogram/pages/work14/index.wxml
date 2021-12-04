@@ -1,0 +1,38 @@
+<view class="content">
+  <view>电影</view>
+  <scroll-view scroll-x="true">
+    <view class="movies">
+      <view class="movie" wx:for="{{movie}}" wx:key="this">
+        <navigator url="detail?type=movie&id={{item.id}}">
+          <image src="{{item.cover.url}}" class="cover"></image>
+          <view>{{item.title}}</view>
+          <mystar value="{{item.rating.value}}" ></mystar>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <view>电视剧</view>
+  <scroll-view scroll-x="true">
+    <view class="movies">
+      <view class="movie" wx:for="{{tv}}" wx:key="this">
+        <navigator url="detail?type=tv&id={{item.id}}">
+          <image src="{{item.cover.url}}" class="cover"></image>
+          <view>{{item.title}}</view>
+          <mystar value="{{item.rating.value}}" ></mystar>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <view>综艺</view>
+  <scroll-view scroll-x="true">
+    <view class="movies">
+      <view class="movie" wx:for="{{zy}}" wx:key="this">
+        <navigator url="detail?type=tv&id={{item.id}}">
+          <image src="{{item.cover.url}}" class="cover"></image>
+          <view>{{item.title}}</view>
+          <mystar value="{{item.rating.value}}" ></mystar>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+</view>

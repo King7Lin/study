@@ -1,0 +1,41 @@
+.content{
+  margin: 20rpx;
+}
+.xq{
+  display: flex;
+  flex-direction: row;
+}
+.xqimg{
+  width: 300rpx;
+  height: 400rpx;
+  border-radius: 20rpx;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  padding-left: 3%;
+}
+.bq{
+  display: flex;
+  flex-wrap: wrap;
+}
+.bqItem{
+  margin: 5rpx 10rpx;
+  padding: 1% 3%;
+  justify-content: center;
+  text-align: center;
+  background: #ccc;
+  border-radius: 50%;
+}
+.dp{
+  height: 350rpx;
+}
+.dpImg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.dpItem{
+  display: flex;
+  padding-top: 50rpx;
+}
