@@ -16,7 +16,6 @@
     "pages/work8/template/template",
     "pages/work8/leader/leader",
     "pages/work8/scenery/scenery",
-    "pages/work7/index",
     "pages/work9/index",
     "pages/work11/index",
     "pages/work10/index",
@@ -24,6 +23,14 @@
     "pages/work13/index",
     "pages/work14/index",
     "pages/work14/detail"
+  ],
+  "subPackages": [
+    {
+      "root": "pageA",
+      "pages": [
+        "work7/index"
+      ]
+    }
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

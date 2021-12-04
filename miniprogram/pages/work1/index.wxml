@@ -13,7 +13,7 @@
 <navigator class="work4" url="/pages/work4 copy/index">work4<text class="text">尤克里里 copy</text></navigator>
 <navigator class="work5" url="/pages/work5/index">work5<text class="text">计算器</text></navigator>
 <navigator class="work6" open-type="switchTab" url="/pages/work6/property">work6 <text class="text">诉讼费</text></navigator>
-<navigator class="work7" url="/pages/work7/index">work7 <text class="text">天气预报</text></navigator>
+<navigator class="work7" url="/pageA/work7/index">work7 <text class="text">天气预报</text></navigator>
 <navigator class="work8" url="/pages/work8/Index/index">work8 <text class="text">机电微官网</text></navigator>
 <navigator class="work9" url="/pages/work9/index">work9 <text class="text">记账</text></navigator>
 <navigator class="work10" url="/pages/work10/index">work10  <text class="text">马赛克</text></navigator>

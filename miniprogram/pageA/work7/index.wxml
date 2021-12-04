@@ -9,7 +9,7 @@
         <text class="he">和风天气</text>
       </view>
     </view>
-  <view class='info' wx:if="{{arr0}}">
+  <view class='info' wx:if="{{arr0}}" wx:key="this">
       <view class='city'>
           <view class='val'>{{location}}</view>
           <view class='message' style="position: absolute; right: 0;font-size: 30rpx">{{time}}更新</view>
@@ -28,7 +28,7 @@
     <view class='guide' wx:if="{{arr0}}">
       <view class='title' style="font-weight: bold;">7 天预报</view>
       <view class='guides'>
-        <view class='item' wx:for='{{arr0[0]}}' wx:for-item="arr">
+        <view class='item' wx:for='{{arr0[0]}}' wx:key="this" wx:for-item="arr">
           <view class='date i'>{{arr.date}}</view>
           <view class='temperature i'>{{arr.tmp_max}}~{{arr.tmp_min}}℃</view>
             <text>{{arr.cond_txt_d}}</text>
@@ -41,7 +41,7 @@
     <view class='guide' wx:if="{{arr1}}">
       <view class='title' style="font-weight: bold;">24小时每3小时天气</view>
       <view class="row1">
-        <view class='details'  wx:for='{{arr1[0]}}' wx:for-item="arr1">
+        <view class='details'  wx:for='{{arr1[0]}}' wx:key="this" wx:for-item="arr1">
           <view class="row2">
             <view class='detail'>
                 <view>温度(℃)</view>
