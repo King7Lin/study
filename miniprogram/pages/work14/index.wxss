@@ -6,10 +6,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-left: 30rpx;
+}
+.title{
+  /* justify-content: center; */
+  text-align: center;
+}
+.mystar{
+  position: relative;
+  left: 50rpx;
 }
 .cover{
   width: 300rpx;
   height: 400rpx;
   border-radius: 30rpx;
   margin: 30rpx;
+}
+.label{
+  font-size: 39rpx;
+  font-weight: bold;
+}
+.line{
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 20rpx;
 }

@@ -1,6 +1,6 @@
-const urlmove = 'https://vue3antdv-7gcma6b228a5b287-1256680780.tcloudbaseapp.com/api/v2/subject_collection/movie_showing/items'
-const urltv = 'https://vue3antdv-7gcma6b228a5b287-1256680780.tcloudbaseapp.com/api/v2/subject_collection/tv_hot/items'
-const urlzy = 'https://vue3antdv-7gcma6b228a5b287-1256680780.tcloudbaseapp.com/api/v2/subject_collection/tv_variety_show/items'
+const urlmove = 'https://m.douban.com/rexxar/api/v2/subject_collection/movie_showing/items?count=10'
+const urltv = 'https://m.douban.com/rexxar/api/v2/subject_collection/tv_hot/items?count=10'
+const urlzy = 'https://m.douban.com/rexxar/api/v2/subject_collection/tv_variety_show/items?count=10'
 Page({
   onLoad(){
     wx.request({
@@ -8,16 +8,16 @@ Page({
       success:res=>{
         console.log(res)
         this.setData({
-          movie:res.data.ssubject_collection_item
+          movie:res.data.subject_collection_items
         })
       }
-    })
+    }),
     wx.request({
       url:urltv,
       success:res=>{
         console.log(res)
         this.setData({
-          tv:res.data.ssubject_collection_item
+          tv:res.data.subject_collection_items
         })
       }
     }),
@@ -26,9 +26,10 @@ Page({
       success:res=>{
         console.log(res)
         this.setData({
-          zy:res.data.ssubject_collection_item
+          zy:res.data.subject_collection_items
         })
       }
     })
-  }
+  },
+
 })

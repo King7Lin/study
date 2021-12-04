@@ -1,4 +1,4 @@
-const baseurl = 'https://vue3antdv-7gcma6b228a5b287-1256680780.tcloudbaseapp.com/api/v2/'
+const baseurl = 'https://m.douban.com/rexxar/api/v2/'
 Page({
   data:{
     start:0,
@@ -8,7 +8,7 @@ Page({
     console.log(option)
     let xq = baseurl + option.type +'/'+ option.id
     let bq = baseurl + option.type + '/' + option.id + '/tags?count=10'
-    let dp = baseurl + option.type + '/' + option.id + '/interests'
+    let dp = baseurl + option.type + '/' + option.id + '/interests?start=' + this.data.start + '&count=' + this.data.count
     wx.request({
       url: xq,
       success:res=>{
@@ -39,7 +39,7 @@ Page({
         console.log(res)
         let dptotal=res.data.total
         this.setData({
-          dp:res.data.iinterest,
+          dp:res.data.interests,
           dptotal
         })
       }
