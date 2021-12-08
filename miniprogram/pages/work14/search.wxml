@@ -1,0 +1,17 @@
+<view class="content">
+  <view wx:for="{{search.subjects.items}}" wx:key='this'>
+    <navigator class="item" url="detail?type={{item.target_type}}&id={{item.target.id}}">
+      <view class="left">
+        <image class="img" src="{{item.target.cover_url}}"></image>
+      </view>
+      <view class="right">
+        <text class="title">{{item.target.title}}</text>
+        <text style="color: #ccc;">({{item.target.year}})</text>
+        <mystar value='{{item.target.rating.value}}'></mystar>
+        <text class="type"> {{item.type_name}}</text>
+        <text>{{item.target.card_subtitle}}</text>
+      </view>
+    </navigator>
+    <view class="line"></view>
+  </view>
+</view>

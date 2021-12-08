@@ -1,4 +1,10 @@
 <view class="content">
+  <view class="top">
+    <view class="search">
+      <icon type="search" bindtap="search"></icon>
+      <input class="input" type="text" bindinput="input" bindconfirm='commitSearch' />
+    </view>
+  </view>
   <view class="label">电影</view>
   <scroll-view scroll-x="true">
     <view class="movies">

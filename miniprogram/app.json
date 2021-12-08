@@ -22,7 +22,8 @@
     "pages/work12/index",
     "pages/work13/index",
     "pages/work14/index",
-    "pages/work14/detail"
+    "pages/work14/detail",
+    "pages/work14/search"
   ],
   "subPackages": [
     {
