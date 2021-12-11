@@ -53,5 +53,5 @@ Page({
         this.setData({
             fei,feiban
         })
-    }
+    },
 })

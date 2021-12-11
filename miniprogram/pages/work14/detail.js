@@ -5,14 +5,14 @@ Page({
     count:5
   },
   onLoad(option){
-    console.log(option)
+    // console.log(option)
     let xq = baseurl + option.type +'/'+ option.id
     let bq = baseurl + option.type + '/' + option.id + '/tags?count=10'
     let dp = baseurl + option.type + '/' + option.id + '/interests?start=' + this.data.start + '&count=' + this.data.count
     wx.request({
       url: xq,
       success:res=>{
-        console.log(res)
+        // console.log(res)
         let mygenres = res.data.genres.join('/')
         let myactors = res.data.actors.slice(0,3).map(v=>{
           return v.name
@@ -27,7 +27,7 @@ Page({
     wx.request({
       url: bq,
       success:res=>{
-        console.log(res)
+        // console.log(res)
         this.setData({
           bq:res.data
         })
@@ -36,12 +36,18 @@ Page({
     wx.request({
       url: dp,
       success:res=>{
-        console.log(res)
+        // console.log(res)
         let dptotal=res.data.total
         this.setData({
           dp:res.data.interests,
           dptotal
         })
+      }
+    })
+    wx.request({
+      url: 'https://api.douban.com/v2/movie/in_theaters?city=广州&start=0&count=10',
+      success:res=>{
+        console.log(res)
       }
     })
     this.setData({

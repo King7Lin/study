@@ -11,3 +11,4 @@
     </view>
     诉讼费为{{fei}}元,减半收取为{{feiban}}元
 </view>
+<navigator class="exitbtn" url="/pages/work1/index">返回</navigator>
