@@ -34,6 +34,7 @@
 .search{
   display: flex;
   margin-left: 20rpx;
+  padding: 40rpx 0;
 }
 .input{
   border-bottom: 1px solid #ccc;

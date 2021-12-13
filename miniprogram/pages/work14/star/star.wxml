@@ -1,10 +1,6 @@
 <view class="stars">
-  <!-- <image class="star" wx:for="{{f}}" wx:key="this" src="fullstar.png"  />
-  <image class="star" wx:for="{{h}}" wx:key="this" src="halfstar.png"  />
-  <image class="star" wx:for="{{e}}" wx:key="this" src="emptystar.png" /> -->
   <image class="star" wx:for="{{value/2-value/2%1}}" wx:key="this" src="fullstar.png"  />
   <image class="star" wx:if="{{value%2>0?1:0}}" wx:key="this" src="halfstar.png"  />
   <image class="star" wx:for="{{5-value/2+value/2%1-(value%2>0?1:0)}}" wx:key="this" src="emptystar.png" />
   <text wx:if="{{displayNum}}">{{value}}</text>
 </view>
-

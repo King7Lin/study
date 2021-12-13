@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "mystar":"star/star"
-  }
+  },
+  "navigationBarTitleText": "豆瓣"
 }

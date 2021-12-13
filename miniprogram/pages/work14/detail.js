@@ -44,12 +44,6 @@ Page({
         })
       }
     })
-    wx.request({
-      url: 'https://api.douban.com/v2/movie/in_theaters?city=广州&start=0&count=10',
-      success:res=>{
-        console.log(res)
-      }
-    })
     this.setData({
       id:option.id,
       type:option.type

@@ -39,3 +39,9 @@
   display: flex;
   padding-top: 50rpx;
 }
+.title{
+  font-size: 60rpx; 
+  text-align: center; 
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}

@@ -1,5 +1,5 @@
 <view class="content">
-  <text style="font-size: 60px;" >{{xq.title}}</text>
+  <view class="title" >{{xq.title}}</view>
   <view class="xq">
     <image src="{{xq.cover_url}}" class="xqimg"></image>
     <view class="details">
