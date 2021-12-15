@@ -46,6 +46,7 @@ Page({
     this.setData({
       fileid:e.currentTarget.dataset.id
     })
+    this.onLoad()
   },
   async long(){
     let res = await wx.chooseImage({
@@ -73,7 +74,7 @@ Page({
     this.setData({
       fileid
     })
-    this.onLoad({fileid})
+    this.onLoad()
   },
   count(index){
     let v = this.data.vlist.find(v=>{
