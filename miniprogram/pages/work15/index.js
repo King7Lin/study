@@ -21,7 +21,7 @@ Page({
     })
     let fileid = this.data.fileid
     if(fileid){
-      let index = res.data.findIndex(v=>{
+      let index = this.data.plist.findIndex(v=>{
         return v.fileid == fileid
       })
       this.setData({index})
