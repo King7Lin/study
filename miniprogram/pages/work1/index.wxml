@@ -20,5 +20,6 @@
 <navigator class="work11" url="/pages/work11/index">work11 <text class="text">阳光晨跑</text></navigator>
 <navigator class="work12" url="/pages/work12/index">work12  <text class="text">教学满意度调查</text></navigator>
 <navigator class="work13" url="/pages/work13/index">work13 <text class="text">听歌</text></navigator>
-<navigator class="work13" url="/pages/work14/index">work14 <text class="text">豆瓣</text></navigator>
+<navigator class="work14" url="/pages/work14/index">work14 <text class="text">豆瓣</text></navigator>
+<navigator class="work15" url="/pages/work15/index">work15 <text class="text">图片投票</text></navigator>
 <navigator class="exitbtn" open-type="exit" target="miniProgram">退出</navigator>

@@ -85,6 +85,12 @@
           "pathName": "pages/work14/search",
           "query": "title=%E6%89%AC%E5%90%8D%E7%AB%8B%E4%B8%87",
           "scene": null
+        },
+        {
+          "name": "pages/work15/index",
+          "pathName": "pages/work15/index",
+          "query": "",
+          "scene": null
         }
       ]
     }
