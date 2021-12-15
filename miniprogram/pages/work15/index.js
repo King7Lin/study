@@ -1,11 +1,23 @@
 const db=wx.cloud.database()
 const pics=db.collection('pics')
 const votes=db.collection('votes')
+let $ = db.command.aggregate
 Page({
   async onLoad(option){
     let res = await pics.get()
     this.setData({
       plist:res.data
+    })
+    res = await votes.aggregate()
+                     .group({
+                       _id:'$fileid',
+                       count:$.sum(1)
+                     })
+                     .end()
+    console.log(res)
+    let vlist = res.list
+    this.setData({
+      vlist
     })
     let fileid = this.data.fileid
     if(fileid){
@@ -13,7 +25,9 @@ Page({
         return v.fileid == fileid
       })
       this.setData({index})
+      this.count(index)
     }
+    
   },
   tap(e){
     console.log(e)
@@ -28,6 +42,9 @@ Page({
           title: '投票成功',
         })
       }
+    })
+    this.setData({
+      fileid:e.currentTarget.dataset.id
     })
   },
   async long(){
@@ -57,5 +74,22 @@ Page({
       fileid
     })
     this.onLoad({fileid})
+  },
+  count(index){
+    let v = this.data.vlist.find(v=>{
+      return v._id==this.data.plist[index].fileid
+    })
+    let count = 0
+    if(v){
+       count =v.count
+    }
+    
+    wx.setNavigationBarTitle({
+      title: index+1 + '/' + this.data.plist.length + ' ' + count + '票',
+    })
+  },
+  change(e){
+    console.log(e)
+    this.count(e.detail.current)
   }
 })
