@@ -3,6 +3,9 @@ const pics=db.collection('pics')
 const votes=db.collection('votes')
 let $ = db.command.aggregate
 Page({
+  data:{
+    maxvote:5
+  },
   async onLoad(option){
     let res = await pics.get()
     this.setData({
@@ -27,7 +30,28 @@ Page({
       this.setData({index})
       this.count(index)
     }
+    res = await wx.cloud.callFunction({
+      name:'login'
+    })
     
+    let openid = res.result.openid
+    this.setData({
+      openid
+    })
+    res = await votes.aggregate()
+                     .match({
+                       _openid:openid
+                     })
+                     .group({
+                       _id:'$fileid',
+                       count:$.sum(1)
+                     })
+                     .end()
+    
+    let votecount = res.list[0].count
+    this.setData({
+      votecount
+    })
   },
   tap(e){
     console.log(e)
