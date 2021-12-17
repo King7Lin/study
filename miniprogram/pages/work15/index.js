@@ -33,7 +33,7 @@ Page({
     res = await wx.cloud.callFunction({
       name:'login'
     })
-    
+    console.log('login:',res)
     let openid = res.result.openid
     this.setData({
       openid
@@ -47,7 +47,7 @@ Page({
                        count:$.sum(1)
                      })
                      .end()
-    
+    console.log('votecount',res)
     let votecount = res.list[0].count
     this.setData({
       votecount
@@ -61,10 +61,19 @@ Page({
       }
     }).then(res=>{
       console.log(res)
+      let count = 5-this.data.votecount
       if(res.errMsg.indexOf('ok')>-1){
-        wx.showToast({
-          title: '投票成功',
-        })
+        if(count>0){
+            wx.showToast({
+              title: '还有'+count+'次投票机会',
+            })
+        }else{
+          wx.showToast({
+            title: '超过投票次数',
+            icon:'error'
+          })
+        }
+        
       }
     })
     this.setData({
