@@ -4,7 +4,8 @@ const votes=db.collection('votes')
 let $ = db.command.aggregate
 Page({
   data:{
-    maxvote:5
+    maxvote:3,
+    count:0
   },
   async onLoad(option){
     let res = await pics.get()
@@ -47,39 +48,44 @@ Page({
                        count:$.sum(1)
                      })
                      .end()
-    console.log('votecount',res)
-    let votecount = res.list[0].count
+    console.log('votecount1',res)
+    let votecount = 0
+    if(res.list[0]){
+      votecount = res.list[0].count
+    }
     this.setData({
       votecount
     })
+      
   },
   tap(e){
-    console.log(e)
-    votes.add({
-      data:{
-        fileid:e.currentTarget.dataset.id
-      }
-    }).then(res=>{
-      console.log(res)
-      let count = 5-this.data.votecount
-      if(res.errMsg.indexOf('ok')>-1){
-        if(count>0){
-            wx.showToast({
-              title: '还有'+count+'次投票机会',
-            })
-        }else{
-          wx.showToast({
-            title: '超过投票次数',
-            icon:'error'
-          })
-        }
-        
-      }
-    })
     this.setData({
       fileid:e.currentTarget.dataset.id
     })
-    this.onLoad()
+     this.onLoad()
+     console.log('tap.vo',this.data.votecount)
+    let count = 3-this.data.votecount
+    let count2 = count-1
+    if(count>0){
+    console.log(e)
+    votes.add({
+      data:{
+        fileid:e.currentTarget.dataset.id,
+      }
+    }).then(res=>{
+      console.log('finish',res)
+      if(res.errMsg.indexOf('ok')>-1){
+        wx.showToast({
+          title: '还有'+count2+'次投票机会',
+        })
+      }
+    })
+  }else{
+    wx.showToast({
+      title: '超过投票次数',
+      icon:'error'
+    })
+  }
   },
   async long(){
     let res = await wx.chooseImage({
@@ -116,14 +122,21 @@ Page({
     let count = 0
     if(v){
        count =v.count
+
     }
-    
     wx.setNavigationBarTitle({
       title: index+1 + '/' + this.data.plist.length + ' ' + count + '票',
+    })
+    this.setData({
+      count
     })
   },
   change(e){
     console.log(e)
     this.count(e.detail.current)
+    // this.setData({
+    //   current:e.detail.current
+    // })
+    // this.onLoad()
   }
 })
