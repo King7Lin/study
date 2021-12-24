@@ -16,6 +16,7 @@ Page({
         write:res.data[num].Ctext,
         english:res.data[num].Etext,
       })
+      
     })
   }
 })
