@@ -1,0 +1,5 @@
+<swiper circular="true" current="{{index}}" bindchange="change">
+    <swiper-item wx:for="{{plist}}" wx:key="this" >
+      <image class="{{count==0?'':'active'}}" src="{{item.fileid}}" bindtap="tap" bindlongpress="long" data-id="{{item.fileid}}"></image>
+    </swiper-item>
+</swiper>

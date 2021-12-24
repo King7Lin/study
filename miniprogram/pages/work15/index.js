@@ -134,9 +134,5 @@ Page({
   change(e){
     console.log(e)
     this.count(e.detail.current)
-    // this.setData({
-    //   current:e.detail.current
-    // })
-    // this.onLoad()
   }
 })
