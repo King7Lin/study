@@ -47,5 +47,23 @@ Page({
     this.setData({
       user
     })
+  },
+  async post(){
+    let res = await wx.cloud.callFunction({
+      name:'pc_post',
+      data:{
+        user:this.data.user
+      }
+    })
+    console.log(res)
+    if(res.result.res.errMsg.indexOf('ok')>-1){
+      await wx.showToast({
+        title: '提交成功',
+        duration:2000,
+      })
+      wx.navigateTo({
+        url: '/pages/work18/list',
+      })
+    }
   }
 })
