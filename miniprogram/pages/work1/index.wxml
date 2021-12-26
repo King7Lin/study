@@ -23,4 +23,6 @@
 <navigator class="work14" url="/pages/work14/index">work14 <text class="text">豆瓣</text></navigator>
 <navigator class="work15" url="/pages/work15/index">work15 <text class="text">图片投票</text></navigator>
 <navigator class="work16" url="/pages/work16/index">work16 <text class="text">图片投票(云函数版)</text></navigator>
+<!-- <navigator class="work17" url="/pages/work17/index">work17 <text class="text"></text></navigator> -->
+<navigator class="work18" url="/pages/work18/index">work18 <text class="text"></text></navigator>
 <navigator class="exitbtn" open-type="exit" target="miniProgram">退出</navigator>

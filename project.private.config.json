@@ -97,6 +97,18 @@
           "pathName": "pages/work16/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/work18/rank",
+          "pathName": "pages/work18/rank",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/work18/index",
+          "pathName": "pages/work18/index",
+          "query": "",
+          "scene": null
         }
       ]
     }
