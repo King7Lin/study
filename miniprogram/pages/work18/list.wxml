@@ -10,7 +10,7 @@
     <swiper-item wx:for="{{list}}" wx:key='this'>
       <scroll-view scroll-y="true" showScrollbar="true" class="list">
         <view class='{{student.name==user.name?"self":""}}' wx:for="{{item}}" wx:key='this' wx:for-item="student">
-          {{student}}
+          {{student.rank}}-{{student.name}}-{{student.score}}
         </view>
       </scroll-view>
     </swiper-item>
@@ -21,5 +21,5 @@
   <view>
     学号：{{user.sn}} 姓名：{{user.name}}  成绩：{{user.score}}  方向：{{result}} 
   </view>
-  <button type="primary" bindtap="rank"></button>
+  <button type="primary" bindtap="rank">修改专业方向</button>
 </view>

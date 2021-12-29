@@ -14,7 +14,7 @@ exports.main = async (event, context) => {
 
   let directions = await directionsCollection.where({}).get()
 
-  let res = await db.collection('student').aggregate()
+  let res = await db.collection('student_2020').aggregate()
   .unwind({
     path:'$choosen',
     includeArrayIndex:'index'

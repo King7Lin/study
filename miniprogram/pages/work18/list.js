@@ -1,66 +1,46 @@
-// pages/work18/list.js
+let app = getApp()
+const db =wx.cloud.database()
+const directionsCollection=db.collection('directions')
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  data:{
+    user:null,
+    list:[],
+    directions:[],
+    nums:[],
+    tab:0,
+    result:''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  async onLoad(options){
+    res = await directionsCollection.where({}).get()
+    let directions = res.data.map(v=>{
+      return v.name
+    })
+    let nums = res.data.map(v=>{
+      return v.num
+    })
+    let res = await wx.cloud.callFunction({
+      name:'pc_statistics'
+    })
+    console.log('pc',res)
+    let result = res.result.list.find(v=>{
+      return v.name == app.globalData.user.name
+    }).choosen
+    console.log(res)
+    let tab = directions.indexOf(result)
+    let list = []
+    directions.forEach(v=>{
+      list.push(res.result.list.filter(vv=>{
+        return vv.choosen == v
+      }))
+    })
+    this.setData({
+      user:app.globalData.user,
+      list,
+      result,
+      tab,
+      directions,
+      nums
+    })
   }
 })

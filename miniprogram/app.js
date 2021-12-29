@@ -22,7 +22,7 @@ App({
       })
     }else{
       this.globalData.user = res.result.result
-      if(res.result.result.name.choosen){
+      if(res.result.result.choosen?.length>0){
         wx.navigateTo({
           url: '/pages/work18/list',
         })
