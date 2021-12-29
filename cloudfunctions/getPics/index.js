@@ -33,6 +33,7 @@ exports.main = async (event, context) => {
       v.count = 0
     }
   })
+  console.log('plist',plist)
   return {
     plist
   }

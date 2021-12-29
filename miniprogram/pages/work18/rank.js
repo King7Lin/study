@@ -15,7 +15,7 @@ Page({
     let user = app.globalData.user
     let choosen = app.globalData.user.choosen
     if(choosen.length==0){
-      choosen = directions
+      choosen = directions.slice(0)
     }
     user.choosen = choosen
     this.setData({

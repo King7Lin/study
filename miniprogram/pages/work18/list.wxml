@@ -1,2 +1,25 @@
-<!--pages/work18/list.wxml-->
-<text>pages/work18/list.wxml</text>
+<!-- 标题 -->
+<view class="tab">
+  <block wx:for="{{directions}}" wx:key="this" class='tab-item {{tab==index?"active":""}}' bindtap="changeItem" data-item="{{index}}">
+    {{item}}{{list[index].length}}/{{nums[index]}}
+  </block>
+</view>
+<!-- 轮播 -->
+<view class="content">
+  <swiper current="{{tab}}" bindchange="changeTab">
+    <swiper-item wx:for="{{list}}" wx:key='this'>
+      <scroll-view scroll-y="true" showScrollbar="true" class="list">
+        <view class='{{student.name==user.name?"self":""}}' wx:for="{{item}}" wx:key='this' wx:for-item="student">
+          {{student}}
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 底栏 -->
+<view class="footer">
+  <view>
+    学号：{{user.sn}} 姓名：{{user.name}}  成绩：{{user.score}}  方向：{{result}} 
+  </view>
+  <button type="primary" bindtap="rank"></button>
+</view>
