@@ -12,7 +12,7 @@ exports.main = async (event, context) => {
   const directionsCollection = db.collection('directions')
   const $ = db.command.aggregate
 
-  let directions = directionsCollection.where({}).get()
+  let directions = await directionsCollection.where({}).get()
 
   let res = await db.collection('student').aggregate()
   .unwind({
