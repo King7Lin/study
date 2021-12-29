@@ -22,11 +22,10 @@ exports.main = async (event, context) => {
                    })
                    .end()
   console.log(res)
-  let vlist = res.list
-                  
+  let vlist = res.list    
   plist.map(v=>{
     let found = vlist.find(vv=>{
-      return vv._id==v._id
+      return vv._id == v.fileid
     })
     if(found){
       v.count = found.count
@@ -34,7 +33,6 @@ exports.main = async (event, context) => {
       v.count = 0
     }
   })
-
   return {
     plist
   }

@@ -126,7 +126,6 @@ Page({
     let count = 0
     if(v){
        count =v.count
-
     }
     wx.setNavigationBarTitle({
       title: index+1 + '/' + this.data.plist.length + ' ' + count + '票',
