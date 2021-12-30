@@ -11,27 +11,27 @@ App({
       })
     }
 
-    let res = await wx.cloud.callFunction({
-      name:'pc_login'
-    })
-    console.log(res)
-    this.globalData = {}
-    if(res.result.result.name=='nobody'){
-      wx.navigateTo({
-        url: '/pages/work18/index',
-      })
-    }else{
-      this.globalData.user = res.result.result
-      if(res.result.result.choosen?.length>0){
-        wx.navigateTo({
-          url: '/pages/work18/list',
-        })
-      }else{
-        wx.navigateTo({
-          url: '/pages/work18/rank',
-        })
-      }
-    }
+    // let res = await wx.cloud.callFunction({
+    //   name:'pc_login'
+    // })
+    // console.log(res)
+    // this.globalData = {}
+    // if(res.result.result.name=='nobody'){
+    //   wx.navigateTo({
+    //     url: '/pages/work18/index',
+    //   })
+    // }else{
+    //   this.globalData.user = res.result.result
+    //   if(res.result.result.choosen?.length>0){
+    //     wx.navigateTo({
+    //       url: '/pages/work18/list',
+    //     })
+    //   }else{
+    //     wx.navigateTo({
+    //       url: '/pages/work18/rank',
+    //     })
+    //   }
+    // }
     
   }
 })
